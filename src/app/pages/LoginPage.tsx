@@ -21,41 +21,27 @@ export function LoginPage() {
     const success = await login(email, password);
     if (success) {
       toast.success('Login successful!');
-
-      // Route to appropriate dashboard based on email
-      if (email.includes('admin')) {
-        navigate('/admin/dashboard');
-      } else if (email.includes('partner')) {
-        navigate('/partner/dashboard');
-      } else if (email.includes('manager')) {
-        navigate('/manager/dashboard');
-      } else if (email.includes('department.head')) {
-        navigate('/department/dashboard');
-      } else {
-        navigate('/researcher/dashboard');
-      }
+      routeByEmail(email);
     } else {
       toast.error('Invalid email or password');
     }
   };
 
-  const quickLogin = (demoEmail: string, demoPassword: string) => {
+  const routeByEmail = (e: string) => {
+    if (e.includes('admin')) navigate('/admin/dashboard');
+    else if (e.includes('partner')) navigate('/partner/dashboard');
+    else if (e.includes('manager')) navigate('/manager/dashboard');
+    else if (e.includes('department.head')) navigate('/department/dashboard');
+    else navigate('/researcher/dashboard');
+  };
+
+  const quickLogin = async (demoEmail: string, demoPassword: string) => {
     setEmail(demoEmail);
     setPassword(demoPassword);
-    const success = login(demoEmail, demoPassword);
+    const success = await login(demoEmail, demoPassword);
     if (success) {
       toast.success('Demo login successful!');
-      if (demoEmail.includes('admin')) {
-        navigate('/admin/dashboard');
-      } else if (demoEmail.includes('partner')) {
-        navigate('/partner/dashboard');
-      } else if (demoEmail.includes('manager')) {
-        navigate('/manager/dashboard');
-      } else if (demoEmail.includes('department.head')) {
-        navigate('/department/dashboard');
-      } else {
-        navigate('/researcher/dashboard');
-      }
+      routeByEmail(demoEmail);
     }
   };
 

@@ -513,7 +513,28 @@ export function AppProvider({ children }: { children: ReactNode }) {
       localStorage.setItem('refreshToken', response.refreshToken);
     }
 
-    setUser(response.user);
+    const dto = response.user;
+    const roleMap: Record<string, UserRole> = {
+      RESEARCHER: 'researcher',
+      ADMIN: 'admin',
+      FUNDER: 'partner',
+      MANAGER: 'manager',
+      DEPARTMENT_HEAD: 'department_head',
+    };
+    const mappedUser: User = {
+      id: dto.id,
+      name: dto.name,
+      email: dto.email,
+      role: (roleMap[dto.role] ?? 'researcher') as UserRole,
+      department: dto.department,
+      institution: dto.institution,
+      orcid: dto.orcid,
+      expertise: dto.expertise ?? [],
+      verified: dto.status === 'ACTIVE',
+      accredited: dto.status === 'ACTIVE',
+      photo: dto.profilePicture ?? `https://api.dicebear.com/7.x/avataaars/svg?seed=${encodeURIComponent(dto.name)}`,
+    };
+    setUser(mappedUser);
     return true;
   } catch (error) {
     console.error('Login failed:', error);
@@ -542,7 +563,20 @@ export function AppProvider({ children }: { children: ReactNode }) {
       localStorage.setItem('refreshToken', response.refreshToken);
     }
 
-    setUser(response.user);
+    const dto = response.user;
+    const mappedUser: User = {
+      id: dto.id,
+      name: dto.name,
+      email: dto.email,
+      role: 'researcher',
+      department: dto.department,
+      institution: dto.institution,
+      expertise: dto.expertise ?? [],
+      verified: false,
+      accredited: false,
+      photo: `https://api.dicebear.com/7.x/avataaars/svg?seed=${encodeURIComponent(dto.name)}`,
+    };
+    setUser(mappedUser);
     return true;
   } catch (error) {
     console.error('Signup failed:', error);

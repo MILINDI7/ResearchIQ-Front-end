@@ -1,12 +1,30 @@
 import { api } from './client';
-import type { User } from '../app/context/AppContext';
 
 export type BackendRole = 'ADMIN' | 'RESEARCHER' | 'FUNDER' | 'MANAGER' | 'DEPARTMENT_HEAD';
+
+export interface AuthUserDto {
+  id: string;
+  name: string;
+  email: string;
+  role: string;
+  status?: string;
+  department?: string;
+  institution?: string;
+  orcid?: string;
+  position?: string;
+  profilePicture?: string;
+  expertise?: string[];
+  publications?: number;
+  citations?: number;
+  hIndex?: number;
+}
 
 export interface AuthResponse {
   token: string;
   refreshToken?: string;
-  user: User;
+  user: AuthUserDto;
+  mfaRequired?: boolean;
+  mfaCode?: string;
 }
 
 export interface SignupData {
