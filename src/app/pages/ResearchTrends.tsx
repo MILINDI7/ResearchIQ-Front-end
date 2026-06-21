@@ -39,11 +39,11 @@ export function ResearchTrends() {
   }
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-blue-50 via-white to-green-50">
-      <nav className="bg-white/80 backdrop-blur-md border-b border-blue-100">
+    <div className="min-h-screen bg-[#F2F3F5]">
+      <nav className="bg-white/80 backdrop-blur-md border-b border-gray-200">
         <div className="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
           <div className="flex items-center gap-2">
-            <div className="w-10 h-10 bg-gradient-to-br from-blue-600 to-green-600 rounded-lg flex items-center justify-center">
+            <div className="w-10 h-10 bg-[#1A3C34] rounded-lg flex items-center justify-center">
               <Brain className="w-6 h-6 text-white" />
             </div>
             <span className="font-bold text-xl">Research Trends</span>
@@ -68,7 +68,7 @@ export function ResearchTrends() {
                 <XAxis dataKey="month" />
                 <YAxis />
                 <Tooltip />
-                <Line type="monotone" dataKey="ml" stroke="#3B82F6" strokeWidth={2} name="Machine Learning" />
+                <Line type="monotone" dataKey="ml" stroke="#84CC16" strokeWidth={2} name="Machine Learning" />
                 <Line type="monotone" dataKey="quantum" stroke="#10B981" strokeWidth={2} name="Quantum Computing" />
                 <Line type="monotone" dataKey="climate" stroke="#8B5CF6" strokeWidth={2} name="Climate Science" />
               </LineChart>
@@ -83,7 +83,7 @@ export function ResearchTrends() {
                 <XAxis dataKey="topic" angle={-45} textAnchor="end" height={100} />
                 <YAxis />
                 <Tooltip />
-                <Bar dataKey="papers" fill="#3B82F6" />
+                <Bar dataKey="papers" fill="#1A3C34" />
               </BarChart>
             </ResponsiveContainer>
           </Card>
@@ -95,10 +95,10 @@ export function ResearchTrends() {
             {topicData.map((topic, idx) => (
               <div
                 key={topic.topic}
-                className="flex items-center justify-between p-4 border border-gray-200 rounded-lg hover:border-blue-300 hover:shadow-md transition-all"
+                className="flex items-center justify-between p-4 border border-gray-200 rounded-lg hover:border-[#1A3C34]/30 hover:shadow-md transition-all"
               >
                 <div className="flex items-center gap-4">
-                  <div className="w-8 h-8 bg-gradient-to-br from-blue-600 to-green-600 rounded-lg flex items-center justify-center text-white font-bold">
+                  <div className="w-8 h-8 bg-[#1A3C34] rounded-lg flex items-center justify-center text-white font-bold">
                     {idx + 1}
                   </div>
                   <div>
@@ -109,7 +109,7 @@ export function ResearchTrends() {
 
                 <div className="flex items-center gap-6">
                   <Badge
-                    className={topic.trend === 'up' ? 'bg-green-100 text-green-700' : 'bg-red-100 text-red-700'}
+                    className={topic.trend === 'up' ? 'bg-lime-100 text-[#15803d]' : 'bg-red-100 text-red-700'}
                   >
                     {topic.trend === 'up' ? <TrendingUp className="w-4 h-4 mr-1" /> : <TrendingDown className="w-4 h-4 mr-1" />}
                     {topic.growth}

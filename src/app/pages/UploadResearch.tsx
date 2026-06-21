@@ -103,13 +103,13 @@ export function UploadResearch() {
                       setImagePreview('');
                       setFormData(prev => ({ ...prev, coverImage: '' }));
                     }}
-                    className="absolute top-4 right-4 p-2 bg-white rounded-full shadow-lg hover:bg-gray-100"
+                    className="absolute top-4 right-4 p-2 bg-white rounded-full shadow-sm hover:bg-gray-100"
                   >
                     <X className="w-5 h-5" />
                   </button>
                 </div>
               ) : (
-                <label className="flex flex-col items-center justify-center w-full h-96 border-2 border-dashed border-gray-300 rounded-lg cursor-pointer hover:border-blue-500 hover:bg-blue-50 transition-all">
+                <label className="flex flex-col items-center justify-center w-full h-96 border-2 border-dashed border-gray-300 rounded-lg cursor-pointer hover:border-blue-500 hover:bg-[#F0FDF4] transition-all">
                   <div className="flex flex-col items-center justify-center pt-5 pb-6">
                     <ImagePlus className="w-16 h-16 text-gray-400 mb-4" />
                     <p className="mb-2 text-lg font-medium text-gray-700">Drop cover image or PDF</p>
@@ -221,7 +221,7 @@ export function UploadResearch() {
               {formData.keywords.length > 0 && (
                 <div className="flex flex-wrap gap-2">
                   {formData.keywords.map(keyword => (
-                    <Badge key={keyword} className="gap-2 bg-blue-100 text-blue-700">
+                    <Badge key={keyword} className="gap-2 bg-[#E8F5E9] text-[#1A3C34]">
                       {keyword}
                       <button
                         type="button"
@@ -238,7 +238,7 @@ export function UploadResearch() {
           </Card>
 
           {/* AI Features Banner */}
-          <Card className="p-6 bg-gradient-to-r from-blue-600 to-green-600 text-white">
+          <Card className="p-6 bg-[#1A3C34] text-white">
             <div className="flex items-start gap-4">
               <div className="p-3 bg-white/20 rounded-lg">
                 <Sparkles className="w-6 h-6" />
@@ -271,7 +271,7 @@ export function UploadResearch() {
             </Button>
             <Button
               type="submit"
-              className="flex-1 bg-gradient-to-r from-blue-600 to-green-600 hover:from-blue-700 hover:to-green-700"
+              className="flex-1 bg-[#1A3C34] hover:bg-[#15302a]"
             >
               Share research
             </Button>

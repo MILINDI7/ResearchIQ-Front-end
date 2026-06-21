@@ -59,8 +59,8 @@ export function RequestsPage() {
         <div className="grid grid-cols-4 gap-6 mb-8">
           <Card className="p-6">
             <div className="flex items-center justify-between mb-4">
-              <div className="p-3 bg-blue-100 rounded-lg">
-                <FileText className="w-6 h-6 text-blue-600" />
+              <div className="p-3 bg-[#E8F5E9] rounded-lg">
+                <FileText className="w-6 h-6 text-[#1A3C34]" />
               </div>
             </div>
             <div className="text-3xl font-bold mb-1">{myRequests.length}</div>
@@ -79,8 +79,8 @@ export function RequestsPage() {
 
           <Card className="p-6">
             <div className="flex items-center justify-between mb-4">
-              <div className="p-3 bg-green-100 rounded-lg">
-                <CheckCircle className="w-6 h-6 text-green-600" />
+              <div className="p-3 bg-lime-100 rounded-lg">
+                <CheckCircle className="w-6 h-6 text-[#16a34a]" />
               </div>
             </div>
             <div className="text-3xl font-bold mb-1">{acceptedCount}</div>
@@ -144,9 +144,9 @@ export function RequestsPage() {
               const requester = getRequester(request.fromUserId);
 
               return (
-                <Card key={request.id} className="p-6 hover:shadow-lg transition-all">
+                <Card key={request.id} className="p-6 hover:shadow-sm transition-all">
                   <div className="flex gap-6">
-                    <Avatar className="w-16 h-16 bg-gradient-to-br from-blue-500 to-green-500 flex items-center justify-center text-white font-bold text-xl">
+                    <Avatar className="w-16 h-16 bg-[#1A3C34] flex items-center justify-center text-white font-bold text-xl">
                       {request.fromUserName.charAt(0)}
                     </Avatar>
 
@@ -157,7 +157,7 @@ export function RequestsPage() {
                             <h3 className="text-xl font-bold">{request.fromUserName}</h3>
                             <Badge className={
                               request.status === 'pending' ? 'bg-yellow-100 text-yellow-700' :
-                              request.status === 'accepted' ? 'bg-green-100 text-green-700' :
+                              request.status === 'accepted' ? 'bg-lime-100 text-[#15803d]' :
                               'bg-red-100 text-red-700'
                             }>
                               {request.status === 'pending' && <Clock className="w-3 h-3 mr-1" />}
@@ -181,12 +181,12 @@ export function RequestsPage() {
                         </div>
                       </div>
 
-                      <div className="bg-blue-50 border border-blue-200 rounded-lg p-4 mb-4">
+                      <div className="bg-[#F0FDF4] border border-[#1A3C34]/20 rounded-lg p-4 mb-4">
                         <div className="flex items-center gap-2 mb-2">
                           {request.type === 'funding' ? (
-                            <DollarSign className="w-4 h-4 text-blue-600" />
+                            <DollarSign className="w-4 h-4 text-[#1A3C34]" />
                           ) : (
-                            <Users className="w-4 h-4 text-blue-600" />
+                            <Users className="w-4 h-4 text-[#1A3C34]" />
                           )}
                           <span className="font-bold text-blue-900">
                             {request.type === 'funding' ? 'Funding Request' : 'Collaboration Request'}
@@ -232,7 +232,7 @@ export function RequestsPage() {
                       {request.status === 'pending' && (
                         <div className="flex gap-3">
                           <Button
-                            className="bg-green-600 hover:bg-green-700"
+                            className="bg-lime-500 hover:bg-green-700"
                             onClick={() => handleAccept(request.id, request.fromUserName)}
                           >
                             <CheckCircle className="w-4 h-4 mr-2" />

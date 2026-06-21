@@ -46,15 +46,15 @@ export function LoginPage() {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-blue-50 via-white to-green-50 flex items-center justify-center p-6">
+    <div className="min-h-screen bg-[#F2F3F5] flex items-center justify-center p-6">
       <div className="w-full max-w-5xl">
         {/* Header */}
         <div className="text-center mb-8">
           <div className="flex items-center justify-center gap-2 mb-4">
-            <div className="w-12 h-12 bg-gradient-to-br from-blue-600 to-green-600 rounded-lg flex items-center justify-center">
+            <div className="w-12 h-12 bg-[#1A3C34] rounded-lg flex items-center justify-center">
               <Brain className="w-7 h-7 text-white" />
             </div>
-            <span className="font-bold text-2xl bg-gradient-to-r from-blue-600 to-green-600 bg-clip-text text-transparent">
+            <span className="font-bold text-2xl text-[#1A3C34]">
               Research IQ
             </span>
           </div>
@@ -64,7 +64,7 @@ export function LoginPage() {
 
         <div className="grid grid-cols-2 gap-8">
           {/* Login Form */}
-          <Card className="p-8 bg-white shadow-lg">
+          <Card className="p-8 bg-white shadow-sm">
             <form onSubmit={handleSubmit} className="space-y-6">
               <div>
                 <Label htmlFor="email">Email Address</Label>
@@ -95,14 +95,14 @@ export function LoginPage() {
                   <input type="checkbox" className="rounded" />
                   <span className="text-gray-600">Remember me</span>
                 </label>
-                <button type="button" className="text-blue-600 hover:underline">
+                <button type="button" className="text-[#1A3C34] hover:underline">
                   Forgot password?
                 </button>
               </div>
 
               <Button
                 type="submit"
-                className="w-full bg-gradient-to-r from-blue-600 to-green-600 hover:from-blue-700 hover:to-green-700"
+                className="w-full bg-[#1A3C34] hover:bg-[#15302a]"
               >
                 <Lock className="w-4 h-4 mr-2" />
                 Sign In
@@ -114,7 +114,7 @@ export function LoginPage() {
                   <button
                     type="button"
                     onClick={() => navigate('/signup')}
-                    className="text-blue-600 hover:underline font-medium"
+                    className="text-[#1A3C34] hover:underline font-medium"
                   >
                     Sign up
                   </button>
@@ -125,7 +125,7 @@ export function LoginPage() {
 
           {/* Demo Accounts */}
           {showDemoAccounts && (
-            <Card className="p-8 bg-gradient-to-br from-blue-50 to-green-50 border-2 border-blue-200">
+            <Card className="p-8 bg-[#F0FDF4] border-2 border-[#1A3C34]/20">
               <div className="mb-6">
                 <h3 className="text-xl font-bold mb-2">Quick Demo Access</h3>
                 <p className="text-sm text-gray-600">
@@ -202,8 +202,8 @@ function DemoAccountButton({ role, email, description, color, onClick }: {
   color: 'blue' | 'green';
   onClick: () => void;
 }) {
-  const bgColor = color === 'blue' ? 'bg-blue-100 hover:bg-blue-200' : 'bg-green-100 hover:bg-green-200';
-  const textColor = color === 'blue' ? 'text-blue-700' : 'text-green-700';
+  const bgColor = color === 'blue' ? 'bg-lime-100 hover:bg-lime-200' : 'bg-lime-100 hover:bg-lime-200';
+  const textColor = color === 'blue' ? 'text-[#1A3C34]' : 'text-[#15803d]';
 
   return (
     <button

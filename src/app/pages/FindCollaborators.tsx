@@ -70,17 +70,17 @@ export function FindCollaborators() {
   });
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-blue-50 via-white to-green-50">
+    <div className="min-h-screen bg-[#F2F3F5]">
       {/* Top Navigation */}
-      <nav className="bg-white/80 backdrop-blur-md border-b border-blue-100 sticky top-0 z-50">
+      <nav className="bg-white border-b border-gray-200 sticky top-0 z-50">
         <div className="max-w-7xl mx-auto px-6 py-4">
           <div className="flex items-center justify-between">
             <div className="flex items-center gap-8">
               <div className="flex items-center gap-2">
-                <div className="w-10 h-10 bg-gradient-to-br from-blue-600 to-green-600 rounded-lg flex items-center justify-center">
+                <div className="w-10 h-10 bg-[#1A3C34] rounded-lg flex items-center justify-center">
                   <Brain className="w-6 h-6 text-white" />
                 </div>
-                <span className="font-bold text-xl bg-gradient-to-r from-blue-600 to-green-600 bg-clip-text text-transparent">
+                <span className="font-bold text-xl text-[#1A3C34]">
                   Research IQ
                 </span>
               </div>
@@ -102,7 +102,7 @@ export function FindCollaborators() {
               </button>
 
               <div className="flex items-center gap-3 pl-4 border-l border-gray-200">
-                <Avatar className="w-10 h-10 bg-gradient-to-br from-blue-500 to-green-500 flex items-center justify-center text-white font-bold">
+                <Avatar className="w-10 h-10 bg-[#1A3C34] flex items-center justify-center text-white font-bold">
                   {user.name.charAt(0)}
                 </Avatar>
                 <div className="text-left">
@@ -123,7 +123,7 @@ export function FindCollaborators() {
         {/* Header */}
         <div className="mb-8">
           <div className="flex items-center gap-3 mb-4">
-            <div className="p-3 bg-gradient-to-br from-blue-600 to-green-600 rounded-lg">
+            <div className="p-3 bg-[#1A3C34] rounded-lg">
               <Sparkles className="w-8 h-8 text-white" />
             </div>
             <div>
@@ -134,7 +134,7 @@ export function FindCollaborators() {
         </div>
 
         {/* AI Insights Banner */}
-        <Card className="p-6 mb-8 bg-gradient-to-r from-blue-600 to-green-600 text-white">
+        <Card className="p-6 mb-8 bg-[#1A3C34] text-white">
           <div className="flex items-center gap-4">
             <div className="p-4 bg-white/20 rounded-lg">
               <Target className="w-8 h-8" />
@@ -195,13 +195,13 @@ export function FindCollaborators() {
             <div className="flex border rounded-lg overflow-hidden">
               <button
                 onClick={() => setViewMode('cards')}
-                className={`px-4 py-2 ${viewMode === 'cards' ? 'bg-blue-600 text-white' : 'bg-white text-gray-600'}`}
+                className={`px-4 py-2 ${viewMode === 'cards' ? 'bg-[#1A3C34] text-white' : 'bg-white text-gray-600'}`}
               >
                 Cards
               </button>
               <button
                 onClick={() => setViewMode('list')}
-                className={`px-4 py-2 ${viewMode === 'list' ? 'bg-blue-600 text-white' : 'bg-white text-gray-600'}`}
+                className={`px-4 py-2 ${viewMode === 'list' ? 'bg-[#1A3C34] text-white' : 'bg-white text-gray-600'}`}
               >
                 List
               </button>
@@ -212,10 +212,10 @@ export function FindCollaborators() {
         {/* Results Count */}
         <div className="mb-6 flex items-center justify-between">
           <div className="text-gray-600">
-            Found <strong className="text-blue-600">{filteredCollaborators.length}</strong> potential collaborators
+            Found <strong className="text-[#1A3C34]">{filteredCollaborators.length}</strong> potential collaborators
             {filteredCollaborators.filter(c => c.matchScore >= 80).length > 0 && (
               <span className="ml-2">
-                • <strong className="text-green-600">{filteredCollaborators.filter(c => c.matchScore >= 80).length}</strong> high matches (80%+)
+                • <strong className="text-[#16a34a]">{filteredCollaborators.filter(c => c.matchScore >= 80).length}</strong> high matches (80%+)
               </span>
             )}
           </div>
@@ -271,9 +271,9 @@ function CollaboratorCard({ researcher, onViewProfile }: {
   onViewProfile: () => void;
 }) {
   return (
-    <Card className="p-6 hover:shadow-xl transition-all cursor-pointer border-2 border-transparent hover:border-blue-300">
+    <Card className="p-6 hover:shadow-md transition-all cursor-pointer border-2 border-transparent hover:border-[#1A3C34]/30">
       <div className="flex items-start gap-4 mb-4">
-        <Avatar className="w-16 h-16 bg-gradient-to-br from-blue-500 to-green-500 flex items-center justify-center text-white font-bold text-2xl flex-shrink-0">
+        <Avatar className="w-16 h-16 bg-[#1A3C34] flex items-center justify-center text-white font-bold text-2xl flex-shrink-0">
           {researcher.name.charAt(0)}
         </Avatar>
         <div className="flex-1 min-w-0">
@@ -282,28 +282,28 @@ function CollaboratorCard({ researcher, onViewProfile }: {
           <p className="text-xs text-gray-500">{researcher.institution}</p>
         </div>
         <div className="text-right">
-          <div className="text-3xl font-bold text-green-600 mb-1">{researcher.matchScore}%</div>
+          <div className="text-3xl font-bold text-[#16a34a] mb-1">{researcher.matchScore}%</div>
           <div className="text-xs text-gray-500">Match Score</div>
         </div>
       </div>
 
       {/* Match Insights */}
-      <div className="bg-gradient-to-r from-blue-50 to-green-50 rounded-lg p-4 mb-4">
+      <div className="bg-[#F0FDF4] rounded-lg p-4 mb-4">
         <div className="flex items-center gap-2 mb-2">
-          <Sparkles className="w-4 h-4 text-blue-600" />
+          <Sparkles className="w-4 h-4 text-[#1A3C34]" />
           <span className="font-semibold text-sm">AI Match Insights</span>
         </div>
         <div className="space-y-1 text-sm">
           <div className="flex items-center gap-2">
-            <div className="w-2 h-2 bg-green-600 rounded-full" />
+            <div className="w-2 h-2 bg-lime-500 rounded-full" />
             <span>{researcher.sharedInterests} shared research interests</span>
           </div>
           <div className="flex items-center gap-2">
-            <div className="w-2 h-2 bg-blue-600 rounded-full" />
+            <div className="w-2 h-2 bg-[#1A3C34] rounded-full" />
             <span>{researcher.synergy} collaboration synergy</span>
           </div>
           <div className="flex items-center gap-2">
-            <div className="w-2 h-2 bg-green-600 rounded-full" />
+            <div className="w-2 h-2 bg-lime-500 rounded-full" />
             <span>Complementary expertise match</span>
           </div>
         </div>
@@ -324,15 +324,15 @@ function CollaboratorCard({ researcher, onViewProfile }: {
       {/* Stats */}
       <div className="grid grid-cols-3 gap-4 mb-4 text-center">
         <div>
-          <div className="font-bold text-blue-600">{researcher.publications}</div>
+          <div className="font-bold text-[#1A3C34]">{researcher.publications}</div>
           <div className="text-xs text-gray-500">Publications</div>
         </div>
         <div>
-          <div className="font-bold text-green-600">{researcher.citations}</div>
+          <div className="font-bold text-[#16a34a]">{researcher.citations}</div>
           <div className="text-xs text-gray-500">Citations</div>
         </div>
         <div>
-          <div className="font-bold text-blue-600">{researcher.hIndex}</div>
+          <div className="font-bold text-[#1A3C34]">{researcher.hIndex}</div>
           <div className="text-xs text-gray-500">h-index</div>
         </div>
       </div>
@@ -340,7 +340,7 @@ function CollaboratorCard({ researcher, onViewProfile }: {
       {/* Actions */}
       <div className="flex gap-2">
         <Button
-          className="flex-1 bg-gradient-to-r from-blue-600 to-green-600 hover:from-blue-700 hover:to-green-700"
+          className="flex-1 bg-[#1A3C34] hover:bg-[#15302a]"
           onClick={onViewProfile}
         >
           View Profile
@@ -361,16 +361,16 @@ function CollaboratorListItem({ researcher, onViewProfile }: {
   onViewProfile: () => void;
 }) {
   return (
-    <Card className="p-6 hover:shadow-lg transition-all cursor-pointer border-2 border-transparent hover:border-blue-300">
+    <Card className="p-6 hover:shadow-sm transition-all cursor-pointer border-2 border-transparent hover:border-[#1A3C34]/30">
       <div className="flex items-center gap-6">
-        <Avatar className="w-16 h-16 bg-gradient-to-br from-blue-500 to-green-500 flex items-center justify-center text-white font-bold text-2xl flex-shrink-0">
+        <Avatar className="w-16 h-16 bg-[#1A3C34] flex items-center justify-center text-white font-bold text-2xl flex-shrink-0">
           {researcher.name.charAt(0)}
         </Avatar>
 
         <div className="flex-1">
           <div className="flex items-center gap-3 mb-2">
             <h3 className="text-xl font-bold">{researcher.name}</h3>
-            <Badge className="bg-green-100 text-green-700">{researcher.matchScore}% Match</Badge>
+            <Badge className="bg-lime-100 text-[#15803d]">{researcher.matchScore}% Match</Badge>
           </div>
           <p className="text-sm text-gray-600 mb-3">
             {researcher.department} • {researcher.institution}
@@ -386,15 +386,15 @@ function CollaboratorListItem({ researcher, onViewProfile }: {
 
         <div className="flex items-center gap-8 text-center">
           <div>
-            <div className="font-bold text-blue-600">{researcher.publications}</div>
+            <div className="font-bold text-[#1A3C34]">{researcher.publications}</div>
             <div className="text-xs text-gray-500">Publications</div>
           </div>
           <div>
-            <div className="font-bold text-green-600">{researcher.citations}</div>
+            <div className="font-bold text-[#16a34a]">{researcher.citations}</div>
             <div className="text-xs text-gray-500">Citations</div>
           </div>
           <div>
-            <div className="font-bold text-blue-600">{researcher.hIndex}</div>
+            <div className="font-bold text-[#1A3C34]">{researcher.hIndex}</div>
             <div className="text-xs text-gray-500">h-index</div>
           </div>
         </div>

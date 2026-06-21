@@ -104,11 +104,11 @@ export function FundingOpportunities() {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-blue-50 via-white to-green-50">
-      <nav className="bg-white/80 backdrop-blur-md border-b border-blue-100">
+    <div className="min-h-screen bg-[#F2F3F5]">
+      <nav className="bg-white/80 backdrop-blur-md border-b border-gray-200">
         <div className="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
           <div className="flex items-center gap-2">
-            <div className="w-10 h-10 bg-gradient-to-br from-blue-600 to-green-600 rounded-lg flex items-center justify-center">
+            <div className="w-10 h-10 bg-[#1A3C34] rounded-lg flex items-center justify-center">
               <Brain className="w-6 h-6 text-white" />
             </div>
             <span className="font-bold text-xl">Funding Opportunities</span>
@@ -124,7 +124,7 @@ export function FundingOpportunities() {
         <h1 className="text-4xl font-bold mb-2">AI-Matched Funding Opportunities</h1>
         <p className="text-gray-600 mb-8">Personalized grant recommendations based on your research expertise and interests</p>
 
-        <Card className="p-6 mb-8 bg-gradient-to-r from-blue-600 to-green-600 text-white">
+        <Card className="p-6 mb-8 bg-[#1A3C34] text-white">
           <div className="flex items-center gap-4">
             <div className="p-4 bg-white/20 rounded-lg">
               <Sparkles className="w-8 h-8" />
@@ -145,15 +145,15 @@ export function FundingOpportunities() {
             return (
               <Card
                 key={opp.id}
-                className="p-6 hover:shadow-xl transition-all border-2 border-transparent hover:border-blue-300"
+                className="p-6 hover:shadow-md transition-all border-2 border-transparent hover:border-[#1A3C34]/30"
               >
                 <div className="flex gap-6">
                   <div className="flex-1">
                     <div className="flex items-start justify-between mb-4">
                       <div className="flex-1">
                         <div className="flex items-center gap-3 mb-2">
-                          <h3 className="text-2xl font-bold text-blue-600">{opp.title}</h3>
-                          <Badge className="bg-green-100 text-green-700">
+                          <h3 className="text-2xl font-bold text-[#1A3C34]">{opp.title}</h3>
+                          <Badge className="bg-lime-100 text-[#15803d]">
                             {opp.match}% Match
                           </Badge>
                         </div>
@@ -162,7 +162,7 @@ export function FundingOpportunities() {
                         <div className="flex items-center gap-6 text-sm text-gray-600 mb-4">
                           <div className="flex items-center gap-2">
                             <DollarSign className="w-4 h-4" />
-                            <span className="font-bold text-green-600">{opp.amount}</span>
+                            <span className="font-bold text-[#16a34a]">{opp.amount}</span>
                           </div>
                           <div className="flex items-center gap-2">
                             <Clock className="w-4 h-4" />
@@ -180,9 +180,9 @@ export function FundingOpportunities() {
                           ))}
                         </div>
 
-                        <div className="bg-blue-50 border border-blue-200 rounded-lg p-4">
+                        <div className="bg-[#F0FDF4] border border-[#1A3C34]/20 rounded-lg p-4">
                           <div className="flex items-start gap-2">
-                            <Target className="w-4 h-4 text-blue-600 mt-0.5 flex-shrink-0" />
+                            <Target className="w-4 h-4 text-[#1A3C34] mt-0.5 flex-shrink-0" />
                             <div className="text-sm text-blue-900">
                               <strong>Why this matches:</strong> Your expertise in {user.expertise?.[0]} aligns perfectly with this grant's focus areas.
                               Recent publications show {opp.match}% compatibility with funding priorities.
@@ -194,7 +194,7 @@ export function FundingOpportunities() {
 
                     <div className="flex items-center gap-3">
                       <Button
-                        className="bg-gradient-to-r from-blue-600 to-green-600 hover:from-blue-700 hover:to-green-700"
+                        className="bg-[#1A3C34] hover:bg-[#15302a]"
                         onClick={() => handleApply(opp)}
                       >
                         Apply Now
@@ -209,14 +209,14 @@ export function FundingOpportunities() {
                   </div>
 
                   <div className="w-64">
-                    <Card className="p-4 bg-gradient-to-br from-green-50 to-blue-50 border-2 border-green-200">
+                    <Card className="p-4 bg-lime-50 border-2 border-lime-300">
                       <div className="text-center mb-3">
                         <div className="text-sm text-gray-600 mb-1">Success Probability</div>
-                        <div className="text-4xl font-bold text-green-600">{opp.match - 10}%</div>
+                        <div className="text-4xl font-bold text-[#16a34a]">{opp.match - 10}%</div>
                       </div>
                       <div className="w-full h-2 bg-gray-200 rounded-full overflow-hidden mb-3">
                         <div
-                          className="h-full bg-gradient-to-r from-green-600 to-blue-600"
+                          className="h-full bg-lime-500"
                           style={{ width: `${opp.match - 10}%` }}
                         />
                       </div>
@@ -234,7 +234,7 @@ export function FundingOpportunities() {
                         </div>
                         <div className="w-full h-1 bg-gray-200 rounded-full overflow-hidden">
                           <div
-                            className="h-full bg-gradient-to-r from-yellow-500 to-red-500"
+                            className="h-full bg-yellow-500"
                             style={{ width: `${((15 - daysLeft) / 15) * 100}%` }}
                           />
                         </div>
@@ -260,10 +260,10 @@ export function FundingOpportunities() {
 
             {selectedFunding && (
               <div className="space-y-6">
-                <div className="bg-blue-50 border border-blue-200 rounded-lg p-4">
+                <div className="bg-[#F0FDF4] border border-[#1A3C34]/20 rounded-lg p-4">
                   <div className="font-bold text-lg text-blue-900 mb-2">{selectedFunding.title}</div>
-                  <div className="text-sm text-blue-700 mb-1">{selectedFunding.agency}</div>
-                  <div className="flex items-center gap-4 text-sm text-blue-600">
+                  <div className="text-sm text-[#1A3C34] mb-1">{selectedFunding.agency}</div>
+                  <div className="flex items-center gap-4 text-sm text-[#1A3C34]">
                     <span className="font-bold">Amount: {selectedFunding.amount}</span>
                     <span>Deadline: {selectedFunding.deadline}</span>
                   </div>
@@ -313,7 +313,7 @@ export function FundingOpportunities() {
                     Cancel
                   </Button>
                   <Button
-                    className="bg-gradient-to-r from-blue-600 to-green-600 hover:from-blue-700 hover:to-green-700"
+                    className="bg-[#1A3C34] hover:bg-[#15302a]"
                     onClick={handleSubmitApplication}
                   >
                     Submit Application

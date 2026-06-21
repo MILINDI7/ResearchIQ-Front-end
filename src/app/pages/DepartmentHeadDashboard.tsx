@@ -54,14 +54,14 @@ export function DepartmentHeadDashboard() {
   ];
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-blue-50 via-white to-green-50">
-      <nav className="bg-white/80 backdrop-blur-md border-b border-blue-100 sticky top-0 z-50">
+    <div className="min-h-screen bg-[#F2F3F5]">
+      <nav className="bg-white border-b border-gray-200 sticky top-0 z-50">
         <div className="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
           <div className="flex items-center gap-2">
-            <div className="w-10 h-10 bg-gradient-to-br from-blue-600 to-green-600 rounded-lg flex items-center justify-center">
+            <div className="w-10 h-10 bg-[#1A3C34] rounded-lg flex items-center justify-center">
               <Brain className="w-6 h-6 text-white" />
             </div>
-            <span className="font-bold text-xl bg-gradient-to-r from-blue-600 to-green-600 bg-clip-text text-transparent">Research IQ</span>
+            <span className="font-bold text-xl text-[#1A3C34]">Research IQ</span>
           </div>
           <div className="flex items-center gap-4">
             <button className="relative p-2 hover:bg-gray-100 rounded-lg transition-colors">
@@ -69,7 +69,7 @@ export function DepartmentHeadDashboard() {
               <span className="absolute top-1 right-1 w-2 h-2 bg-red-500 rounded-full" />
             </button>
             <div className="flex items-center gap-3 pl-4 border-l border-gray-200">
-              <Avatar className="w-10 h-10 bg-gradient-to-br from-blue-500 to-green-500 flex items-center justify-center text-white font-bold">
+              <Avatar className="w-10 h-10 bg-[#1A3C34] flex items-center justify-center text-white font-bold">
                 {user.name.charAt(0)}
               </Avatar>
               <div className="text-left">
@@ -99,7 +99,7 @@ export function DepartmentHeadDashboard() {
                     onClick={() => setActiveSection(section.id)}
                     className={`w-full flex items-center gap-3 px-3 py-2.5 rounded-lg text-sm transition-all ${
                       isActive
-                        ? 'bg-blue-600 text-white font-medium'
+                        ? 'bg-[#1A3C34] text-white font-medium rounded-lg'
                         : 'text-gray-700 hover:bg-gray-100'
                     }`}
                   >
@@ -146,10 +146,10 @@ export function DepartmentHeadDashboard() {
               <div className="grid grid-cols-4 gap-6 mb-8">
           <Card className="p-6">
             <div className="flex items-center justify-between mb-4">
-              <div className="p-3 bg-blue-100 rounded-lg">
-                <Users className="w-6 h-6 text-blue-600" />
+              <div className="p-3 bg-[#E8F5E9] rounded-lg">
+                <Users className="w-6 h-6 text-[#1A3C34]" />
               </div>
-              <Badge className="bg-blue-100 text-blue-700">+2</Badge>
+              <Badge className="bg-[#E8F5E9] text-[#1A3C34]">+2</Badge>
             </div>
             <div className="text-3xl font-bold mb-1">{departmentResearchers.length}</div>
             <div className="text-sm text-gray-600">Department Researchers</div>
@@ -157,10 +157,10 @@ export function DepartmentHeadDashboard() {
 
           <Card className="p-6">
             <div className="flex items-center justify-between mb-4">
-              <div className="p-3 bg-green-100 rounded-lg">
-                <FileText className="w-6 h-6 text-green-600" />
+              <div className="p-3 bg-lime-100 rounded-lg">
+                <FileText className="w-6 h-6 text-[#16a34a]" />
               </div>
-              <Badge className="bg-green-100 text-green-700">+12%</Badge>
+              <Badge className="bg-lime-100 text-[#15803d]">+12%</Badge>
             </div>
             <div className="text-3xl font-bold mb-1">{departmentResearch.length}</div>
             <div className="text-sm text-gray-600">Publications This Year</div>
@@ -199,7 +199,7 @@ export function DepartmentHeadDashboard() {
                 <XAxis dataKey="month" />
                 <YAxis />
                 <Tooltip />
-                <Bar dataKey="pubs" fill="#3B82F6" />
+                <Bar dataKey="pubs" fill="#1A3C34" />
               </BarChart>
             </ResponsiveContainer>
           </Card>
@@ -210,10 +210,10 @@ export function DepartmentHeadDashboard() {
             <div className="space-y-4">
               {departmentResearchers.slice(0, 4).map((researcher, idx) => (
                 <div key={researcher.id} className="flex items-center gap-3 p-3 bg-gray-50 rounded-lg">
-                  <div className="w-8 h-8 bg-gradient-to-r from-blue-600 to-green-600 rounded-full flex items-center justify-center text-white font-bold text-sm">
+                  <div className="w-8 h-8 bg-[#1A3C34] rounded-full flex items-center justify-center text-white font-bold text-sm">
                     {idx + 1}
                   </div>
-                  <Avatar className="w-10 h-10 bg-gradient-to-br from-blue-500 to-green-500 flex items-center justify-center text-white font-bold">
+                  <Avatar className="w-10 h-10 bg-[#1A3C34] flex items-center justify-center text-white font-bold">
                     {researcher.name.charAt(0)}
                   </Avatar>
                   <div className="flex-1">
@@ -231,13 +231,13 @@ export function DepartmentHeadDashboard() {
               <Card className="p-6">
                 <h3 className="text-lg font-bold mb-4">Quick Actions</h3>
                 <div className="grid grid-cols-3 gap-4">
-                  <button className="p-4 bg-blue-50 hover:bg-blue-100 rounded-lg text-left transition-all">
-                    <Download className="w-6 h-6 text-blue-600 mb-2" />
+                  <button className="p-4 bg-[#F0FDF4] hover:bg-[#E8F5E9] rounded-lg text-left transition-all">
+                    <Download className="w-6 h-6 text-[#1A3C34] mb-2" />
                     <div className="font-medium">Export Report</div>
                     <div className="text-xs text-gray-600">Department analytics</div>
                   </button>
-                  <button className="p-4 bg-green-50 hover:bg-green-100 rounded-lg text-left transition-all">
-                    <FileText className="w-6 h-6 text-green-600 mb-2" />
+                  <button className="p-4 bg-lime-50 hover:bg-lime-100 rounded-lg text-left transition-all">
+                    <FileText className="w-6 h-6 text-[#16a34a] mb-2" />
                     <div className="font-medium">View All Publications</div>
                     <div className="text-xs text-gray-600">Department research</div>
                   </button>
@@ -258,7 +258,7 @@ export function DepartmentHeadDashboard() {
                   <h1 className="text-3xl font-bold mb-2">Faculty & Researchers</h1>
                   <p className="text-gray-600">Manage and view department members</p>
                 </div>
-                <Button className="bg-gradient-to-r from-blue-600 to-green-600">
+                <Button className="bg-[#1A3C34]">
                   + Add Researcher
                 </Button>
               </div>
@@ -282,11 +282,11 @@ export function DepartmentHeadDashboard() {
             {departmentResearchers.map(researcher => (
               <div
                 key={researcher.id}
-                className="border border-gray-200 rounded-lg p-4 hover:border-blue-300 transition-all cursor-pointer"
+                className="border border-gray-200 rounded-lg p-4 hover:border-[#1A3C34]/30 transition-all cursor-pointer"
                 onClick={() => navigate(`/researcher/profile/${researcher.id}`)}
               >
                 <div className="flex items-center gap-3 mb-3">
-                  <Avatar className="w-12 h-12 bg-gradient-to-br from-blue-500 to-green-500 flex items-center justify-center text-white font-bold">
+                  <Avatar className="w-12 h-12 bg-[#1A3C34] flex items-center justify-center text-white font-bold">
                     {researcher.name.charAt(0)}
                   </Avatar>
                   <div className="flex-1 min-w-0">
@@ -296,7 +296,7 @@ export function DepartmentHeadDashboard() {
                 </div>
                 <div className="flex items-center justify-between text-xs">
                   <span className="text-gray-600">{researcher.publications} pubs</span>
-                  <Badge className="bg-green-100 text-green-700 text-xs">Active</Badge>
+                  <Badge className="bg-lime-100 text-[#15803d] text-xs">Active</Badge>
                 </div>
               </div>
                   ))}
@@ -313,22 +313,22 @@ export function DepartmentHeadDashboard() {
               </div>
 
               <div className="grid grid-cols-3 gap-6 mb-8">
-                <Card className="p-6 bg-gradient-to-br from-blue-50 to-blue-100">
-                  <div className="text-4xl font-bold text-blue-600 mb-2">{departmentResearch.length}</div>
+                <Card className="p-6 bg-[#F0FDF4]">
+                  <div className="text-4xl font-bold text-[#1A3C34] mb-2">{departmentResearch.length}</div>
                   <div className="text-sm text-gray-700 mb-1">Total Publications</div>
-                  <div className="text-xs text-green-600">+18% vs last year</div>
+                  <div className="text-xs text-[#16a34a]">+18% vs last year</div>
                 </Card>
-                <Card className="p-6 bg-gradient-to-br from-green-50 to-green-100">
-                  <div className="text-4xl font-bold text-green-600 mb-2">
+                <Card className="p-6 bg-lime-50">
+                  <div className="text-4xl font-bold text-[#16a34a] mb-2">
                     {departmentResearch.reduce((sum, r) => sum + r.citations, 0)}
                   </div>
                   <div className="text-sm text-gray-700 mb-1">Total Citations</div>
-                  <div className="text-xs text-green-600">+24% this year</div>
+                  <div className="text-xs text-[#16a34a]">+24% this year</div>
                 </Card>
-                <Card className="p-6 bg-gradient-to-br from-purple-50 to-purple-100">
+                <Card className="p-6 bg-purple-50">
                   <div className="text-4xl font-bold text-purple-600 mb-2">92%</div>
                   <div className="text-sm text-gray-700 mb-1">Research Quality</div>
-                  <div className="text-xs text-green-600">Above target</div>
+                  <div className="text-xs text-[#16a34a]">Above target</div>
                 </Card>
               </div>
 
@@ -341,7 +341,7 @@ export function DepartmentHeadDashboard() {
                       <XAxis dataKey="month" />
                       <YAxis />
                       <Tooltip />
-                      <Line type="monotone" dataKey="pubs" stroke="#3B82F6" strokeWidth={2} />
+                      <Line type="monotone" dataKey="pubs" stroke="#84CC16" strokeWidth={2} />
                     </LineChart>
                   </ResponsiveContainer>
                 </Card>
@@ -389,17 +389,17 @@ export function DepartmentHeadDashboard() {
                 <div className="space-y-4">
                   {departmentResearchers.slice(0, 5).map((researcher, idx) => (
                     <div key={researcher.id} className="flex items-center gap-4 p-4 bg-gray-50 rounded-lg">
-                      <div className="w-8 h-8 bg-gradient-to-r from-blue-600 to-green-600 rounded-full flex items-center justify-center text-white font-bold">
+                      <div className="w-8 h-8 bg-[#1A3C34] rounded-full flex items-center justify-center text-white font-bold">
                         {idx + 1}
                       </div>
-                      <Avatar className="w-12 h-12 bg-gradient-to-br from-blue-500 to-green-500 flex items-center justify-center text-white font-bold">
+                      <Avatar className="w-12 h-12 bg-[#1A3C34] flex items-center justify-center text-white font-bold">
                         {researcher.name.charAt(0)}
                       </Avatar>
                       <div className="flex-1">
                         <div className="font-bold">{researcher.name}</div>
                         <div className="text-sm text-gray-600">{researcher.publications} publications • {researcher.citations} citations</div>
                       </div>
-                      <Badge className="bg-green-100 text-green-700">h-index: {researcher.hIndex}</Badge>
+                      <Badge className="bg-lime-100 text-[#15803d]">h-index: {researcher.hIndex}</Badge>
                     </div>
                   ))}
                 </div>
@@ -417,8 +417,8 @@ export function DepartmentHeadDashboard() {
               <div className="grid grid-cols-4 gap-6 mb-8">
                 <Card className="p-6">
                   <div className="flex items-center justify-between mb-4">
-                    <div className="p-3 bg-green-100 rounded-lg">
-                      <DollarSign className="w-6 h-6 text-green-600" />
+                    <div className="p-3 bg-lime-100 rounded-lg">
+                      <DollarSign className="w-6 h-6 text-[#16a34a]" />
                     </div>
                   </div>
                   <div className="text-3xl font-bold mb-1">$3.1M</div>
@@ -427,8 +427,8 @@ export function DepartmentHeadDashboard() {
 
                 <Card className="p-6">
                   <div className="flex items-center justify-between mb-4">
-                    <div className="p-3 bg-blue-100 rounded-lg">
-                      <Award className="w-6 h-6 text-blue-600" />
+                    <div className="p-3 bg-[#E8F5E9] rounded-lg">
+                      <Award className="w-6 h-6 text-[#1A3C34]" />
                     </div>
                   </div>
                   <div className="text-3xl font-bold mb-1">12</div>
@@ -447,8 +447,8 @@ export function DepartmentHeadDashboard() {
 
                 <Card className="p-6">
                   <div className="flex items-center justify-between mb-4">
-                    <div className="p-3 bg-green-100 rounded-lg">
-                      <TrendingUp className="w-6 h-6 text-green-600" />
+                    <div className="p-3 bg-lime-100 rounded-lg">
+                      <TrendingUp className="w-6 h-6 text-[#16a34a]" />
                     </div>
                   </div>
                   <div className="text-3xl font-bold mb-1">78%</div>
@@ -470,7 +470,7 @@ export function DepartmentHeadDashboard() {
                         </div>
                         <div className="w-full h-2 bg-gray-200 rounded-full overflow-hidden">
                           <div
-                            className="h-full bg-gradient-to-r from-blue-600 to-green-600"
+                            className="h-full bg-[#1A3C34]"
                             style={{ width: `${percentage}%` }}
                           />
                         </div>
@@ -494,8 +494,8 @@ export function DepartmentHeadDashboard() {
                         <div className="text-sm text-gray-600">PI: {grant.researcher}</div>
                       </div>
                       <div className="text-right">
-                        <div className="font-bold text-green-600 mb-1">{grant.amount}</div>
-                        <Badge className={grant.status === 'Active' ? 'bg-green-100 text-green-700' : 'bg-yellow-100 text-yellow-700'}>
+                        <div className="font-bold text-[#16a34a] mb-1">{grant.amount}</div>
+                        <Badge className={grant.status === 'Active' ? 'bg-lime-100 text-[#15803d]' : 'bg-yellow-100 text-yellow-700'}>
                           {grant.status}
                         </Badge>
                       </div>

@@ -63,17 +63,17 @@ export function PartnerDashboard() {
   });
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-blue-50 via-white to-green-50">
+    <div className="min-h-screen bg-[#F2F3F5]">
       {/* Top Navigation */}
-      <nav className="bg-white/80 backdrop-blur-md border-b border-blue-100 sticky top-0 z-50">
+      <nav className="bg-white border-b border-gray-200 sticky top-0 z-50">
         <div className="max-w-7xl mx-auto px-6 py-4">
           <div className="flex items-center justify-between">
             <div className="flex items-center gap-8">
               <div className="flex items-center gap-2">
-                <div className="w-10 h-10 bg-gradient-to-br from-blue-600 to-green-600 rounded-lg flex items-center justify-center">
+                <div className="w-10 h-10 bg-[#1A3C34] rounded-lg flex items-center justify-center">
                   <Brain className="w-6 h-6 text-white" />
                 </div>
-                <span className="font-bold text-xl bg-gradient-to-r from-blue-600 to-green-600 bg-clip-text text-transparent">
+                <span className="font-bold text-xl text-[#1A3C34]">
                   Research IQ Partners
                 </span>
               </div>
@@ -82,7 +82,7 @@ export function PartnerDashboard() {
                 <button
                   onClick={() => setActiveSection('browse')}
                   className={`font-medium transition-colors ${
-                    activeSection === 'browse' ? 'text-blue-600' : 'text-gray-600 hover:text-blue-600'
+                    activeSection === 'browse' ? 'text-[#1A3C34]' : 'text-gray-600 hover:text-[#1A3C34]'
                   }`}
                 >
                   Browse Projects
@@ -90,7 +90,7 @@ export function PartnerDashboard() {
                 <button
                   onClick={() => setActiveSection('investments')}
                   className={`font-medium transition-colors ${
-                    activeSection === 'investments' ? 'text-blue-600' : 'text-gray-600 hover:text-blue-600'
+                    activeSection === 'investments' ? 'text-[#1A3C34]' : 'text-gray-600 hover:text-[#1A3C34]'
                   }`}
                 >
                   My Investments
@@ -98,7 +98,7 @@ export function PartnerDashboard() {
                 <button
                   onClick={() => setActiveSection('analytics')}
                   className={`font-medium transition-colors ${
-                    activeSection === 'analytics' ? 'text-blue-600' : 'text-gray-600 hover:text-blue-600'
+                    activeSection === 'analytics' ? 'text-[#1A3C34]' : 'text-gray-600 hover:text-[#1A3C34]'
                   }`}
                 >
                   Analytics
@@ -113,7 +113,7 @@ export function PartnerDashboard() {
               </button>
 
               <div className="flex items-center gap-3 pl-4 border-l border-gray-200">
-                <Avatar className="w-10 h-10 bg-gradient-to-br from-blue-500 to-green-500 flex items-center justify-center text-white font-bold">
+                <Avatar className="w-10 h-10 bg-[#1A3C34] flex items-center justify-center text-white font-bold">
                   {user.name.charAt(0)}
                 </Avatar>
                 <div className="text-left">
@@ -143,46 +143,46 @@ export function PartnerDashboard() {
             <div className="grid grid-cols-4 gap-6 mb-8">
           <Card className="p-6">
             <div className="flex items-center justify-between mb-4">
-              <div className="p-3 bg-blue-100 rounded-lg text-blue-600">
+              <div className="p-3 bg-[#E8F5E9] rounded-lg text-[#1A3C34]">
                 <BookOpen className="w-6 h-6" />
               </div>
             </div>
             <div className="text-3xl font-bold mb-1">{research.length}</div>
             <div className="text-sm text-gray-600 mb-2">Available Projects</div>
-            <div className="text-xs text-blue-600 font-medium">+12 this week</div>
+            <div className="text-xs text-[#1A3C34] font-medium">+12 this week</div>
           </Card>
 
           <Card className="p-6">
             <div className="flex items-center justify-between mb-4">
-              <div className="p-3 bg-green-100 rounded-lg text-green-600">
+              <div className="p-3 bg-lime-100 rounded-lg text-[#16a34a]">
                 <Users className="w-6 h-6" />
               </div>
             </div>
             <div className="text-3xl font-bold mb-1">{researchers.length}</div>
             <div className="text-sm text-gray-600 mb-2">Active Researchers</div>
-            <div className="text-xs text-green-600 font-medium">Top rated</div>
+            <div className="text-xs text-[#16a34a] font-medium">Top rated</div>
           </Card>
 
           <Card className="p-6">
             <div className="flex items-center justify-between mb-4">
-              <div className="p-3 bg-blue-100 rounded-lg text-blue-600">
+              <div className="p-3 bg-[#E8F5E9] rounded-lg text-[#1A3C34]">
                 <Heart className="w-6 h-6" />
               </div>
             </div>
             <div className="text-3xl font-bold mb-1">{savedProjects.length}</div>
             <div className="text-sm text-gray-600 mb-2">Saved Projects</div>
-            <div className="text-xs text-blue-600 font-medium">Your interest</div>
+            <div className="text-xs text-[#1A3C34] font-medium">Your interest</div>
           </Card>
 
           <Card className="p-6">
             <div className="flex items-center justify-between mb-4">
-              <div className="p-3 bg-green-100 rounded-lg text-green-600">
+              <div className="p-3 bg-lime-100 rounded-lg text-[#16a34a]">
                 <DollarSign className="w-6 h-6" />
               </div>
             </div>
             <div className="text-3xl font-bold mb-1">$2.5M</div>
             <div className="text-sm text-gray-600 mb-2">Avg. Funding Need</div>
-            <div className="text-xs text-green-600 font-medium">High impact</div>
+            <div className="text-xs text-[#16a34a] font-medium">High impact</div>
           </Card>
             </div>
 
@@ -230,7 +230,7 @@ export function PartnerDashboard() {
             return (
               <Card
                 key={project.id}
-                className="p-6 hover:shadow-xl transition-all cursor-pointer border-2 border-transparent hover:border-blue-300"
+                className="p-6 hover:shadow-md transition-all cursor-pointer border-2 border-transparent hover:border-[#1A3C34]/30"
               >
                 <div className="flex gap-6">
                   {/* Left: Project Info */}
@@ -238,10 +238,10 @@ export function PartnerDashboard() {
                     <div className="flex items-start justify-between mb-4">
                       <div className="flex-1">
                         <div className="flex items-center gap-3 mb-2">
-                          <h3 className="text-2xl font-bold text-blue-600">{project.title}</h3>
+                          <h3 className="text-2xl font-bold text-[#1A3C34]">{project.title}</h3>
                           <Badge className={
                             project.fundingStatus === 'seeking' ? 'bg-yellow-100 text-yellow-700' :
-                            project.fundingStatus === 'funded' ? 'bg-green-100 text-green-700' :
+                            project.fundingStatus === 'funded' ? 'bg-lime-100 text-[#15803d]' :
                             'bg-gray-100 text-gray-700'
                           }>
                             {project.fundingStatus === 'seeking' ? 'Seeking Funding' : project.fundingStatus}
@@ -289,7 +289,7 @@ export function PartnerDashboard() {
                       <div className="bg-gray-50 rounded-lg p-4 mb-4">
                         <div className="text-sm font-medium text-gray-600 mb-3">Research Team Lead</div>
                         <div className="flex items-center gap-4">
-                          <Avatar className="w-12 h-12 bg-gradient-to-br from-blue-500 to-green-500 flex items-center justify-center text-white font-bold">
+                          <Avatar className="w-12 h-12 bg-[#1A3C34] flex items-center justify-center text-white font-bold">
                             {lead.name.charAt(0)}
                           </Avatar>
                           <div className="flex-1">
@@ -317,7 +317,7 @@ export function PartnerDashboard() {
                     )}
 
                     <div className="flex items-center gap-3">
-                      <Button className="bg-gradient-to-r from-blue-600 to-green-600 hover:from-blue-700 hover:to-green-700">
+                      <Button className="bg-[#1A3C34] hover:bg-[#15302a]">
                         <DollarSign className="w-4 h-4 mr-2" />
                         Fund This Project
                       </Button>
@@ -332,15 +332,15 @@ export function PartnerDashboard() {
 
                   {/* Right: Metrics */}
                   <div className="w-64 space-y-4">
-                    <Card className="p-4 bg-gradient-to-br from-blue-50 to-green-50 border-2 border-blue-200">
+                    <Card className="p-4 bg-[#F0FDF4] border-2 border-[#1A3C34]/20">
                       <div className="text-center mb-3">
                         <div className="text-sm text-gray-600 mb-1">Impact Score</div>
-                        <div className="text-4xl font-bold text-blue-600">{impactScore}</div>
+                        <div className="text-4xl font-bold text-[#1A3C34]">{impactScore}</div>
                         <div className="text-xs text-gray-500">out of 100</div>
                       </div>
                       <div className="w-full h-2 bg-gray-200 rounded-full overflow-hidden">
                         <div
-                          className="h-full bg-gradient-to-r from-blue-600 to-green-600"
+                          className="h-full bg-[#1A3C34]"
                           style={{ width: `${impactScore}%` }}
                         />
                       </div>
@@ -350,7 +350,7 @@ export function PartnerDashboard() {
                       <div className="space-y-3">
                         <div>
                           <div className="text-sm text-gray-600 mb-1">Funding Needed</div>
-                          <div className="text-2xl font-bold text-green-600">${fundingNeeded}K</div>
+                          <div className="text-2xl font-bold text-[#16a34a]">${fundingNeeded}K</div>
                         </div>
                         <div>
                           <div className="text-sm text-gray-600 mb-1">Duration</div>
@@ -370,14 +370,14 @@ export function PartnerDashboard() {
                       </div>
                     </Card>
 
-                    <Card className="p-4 bg-gradient-to-br from-green-50 to-blue-50">
+                    <Card className="p-4 bg-lime-50">
                       <div className="flex items-center gap-2 mb-2">
-                        <Target className="w-4 h-4 text-green-600" />
+                        <Target className="w-4 h-4 text-[#16a34a]" />
                         <span className="text-sm font-medium">SDG Alignment</span>
                       </div>
                       <div className="flex flex-wrap gap-1">
-                        <Badge className="bg-green-600 text-xs">SDG 13</Badge>
-                        <Badge className="bg-blue-600 text-xs">SDG 9</Badge>
+                        <Badge className="bg-lime-500 text-xs">SDG 13</Badge>
+                        <Badge className="bg-[#1A3C34] text-xs">SDG 9</Badge>
                       </div>
                     </Card>
                   </div>
@@ -407,46 +407,46 @@ export function PartnerDashboard() {
             <div className="grid grid-cols-4 gap-6 mb-8">
               <Card className="p-6">
                 <div className="flex items-center justify-between mb-4">
-                  <div className="p-3 bg-green-100 rounded-lg text-green-600">
+                  <div className="p-3 bg-lime-100 rounded-lg text-[#16a34a]">
                     <DollarSign className="w-6 h-6" />
                   </div>
                 </div>
                 <div className="text-3xl font-bold mb-1">$1.8M</div>
                 <div className="text-sm text-gray-600 mb-2">Total Invested</div>
-                <div className="text-xs text-green-600 font-medium">Across 5 projects</div>
+                <div className="text-xs text-[#16a34a] font-medium">Across 5 projects</div>
               </Card>
 
               <Card className="p-6">
                 <div className="flex items-center justify-between mb-4">
-                  <div className="p-3 bg-blue-100 rounded-lg text-blue-600">
+                  <div className="p-3 bg-[#E8F5E9] rounded-lg text-[#1A3C34]">
                     <BookOpen className="w-6 h-6" />
                   </div>
                 </div>
                 <div className="text-3xl font-bold mb-1">5</div>
                 <div className="text-sm text-gray-600 mb-2">Active Projects</div>
-                <div className="text-xs text-blue-600 font-medium">All on track</div>
+                <div className="text-xs text-[#1A3C34] font-medium">All on track</div>
               </Card>
 
               <Card className="p-6">
                 <div className="flex items-center justify-between mb-4">
-                  <div className="p-3 bg-green-100 rounded-lg text-green-600">
+                  <div className="p-3 bg-lime-100 rounded-lg text-[#16a34a]">
                     <TrendingUp className="w-6 h-6" />
                   </div>
                 </div>
                 <div className="text-3xl font-bold mb-1">23</div>
                 <div className="text-sm text-gray-600 mb-2">Publications</div>
-                <div className="text-xs text-green-600 font-medium">From funded projects</div>
+                <div className="text-xs text-[#16a34a] font-medium">From funded projects</div>
               </Card>
 
               <Card className="p-6">
                 <div className="flex items-center justify-between mb-4">
-                  <div className="p-3 bg-blue-100 rounded-lg text-blue-600">
+                  <div className="p-3 bg-[#E8F5E9] rounded-lg text-[#1A3C34]">
                     <Award className="w-6 h-6" />
                   </div>
                 </div>
                 <div className="text-3xl font-bold mb-1">89</div>
                 <div className="text-sm text-gray-600 mb-2">Impact Score</div>
-                <div className="text-xs text-blue-600 font-medium">High impact</div>
+                <div className="text-xs text-[#1A3C34] font-medium">High impact</div>
               </Card>
             </div>
 
@@ -465,11 +465,11 @@ export function PartnerDashboard() {
                         <div className="flex-1">
                           <div className="flex items-start justify-between mb-4">
                             <div>
-                              <h3 className="text-2xl font-bold text-blue-600 mb-2">{project.title}</h3>
+                              <h3 className="text-2xl font-bold text-[#1A3C34] mb-2">{project.title}</h3>
                               <p className="text-gray-600 mb-3">{project.abstract}</p>
                               {lead && (
                                 <div className="flex items-center gap-3">
-                                  <Avatar className="w-10 h-10 bg-gradient-to-br from-blue-500 to-green-500 flex items-center justify-center text-white font-bold">
+                                  <Avatar className="w-10 h-10 bg-[#1A3C34] flex items-center justify-center text-white font-bold">
                                     {lead.name.charAt(0)}
                                   </Avatar>
                                   <div>
@@ -479,7 +479,7 @@ export function PartnerDashboard() {
                                 </div>
                               )}
                             </div>
-                            <Badge className="bg-green-100 text-green-700">Active</Badge>
+                            <Badge className="bg-lime-100 text-[#15803d]">Active</Badge>
                           </div>
 
                           <div className="mb-4">
@@ -489,7 +489,7 @@ export function PartnerDashboard() {
                             </div>
                             <div className="w-full h-2 bg-gray-200 rounded-full overflow-hidden">
                               <div
-                                className="h-full bg-gradient-to-r from-blue-600 to-green-600"
+                                className="h-full bg-[#1A3C34]"
                                 style={{ width: `${progress}%` }}
                               />
                             </div>
@@ -503,10 +503,10 @@ export function PartnerDashboard() {
                         </div>
 
                         <div className="w-64">
-                          <Card className="p-4 bg-gradient-to-br from-green-50 to-blue-50">
+                          <Card className="p-4 bg-lime-50">
                             <div className="text-center mb-3">
                               <div className="text-sm text-gray-600 mb-1">Your Investment</div>
-                              <div className="text-3xl font-bold text-green-600">${invested}K</div>
+                              <div className="text-3xl font-bold text-[#16a34a]">${invested}K</div>
                             </div>
                             <div className="space-y-2 text-sm">
                               <div className="flex justify-between">
@@ -534,7 +534,7 @@ export function PartnerDashboard() {
                   <h3 className="text-xl font-bold mb-2">No investments yet</h3>
                   <p className="text-gray-600 mb-4">Start funding research projects to see them here</p>
                   <Button
-                    className="bg-gradient-to-r from-blue-600 to-green-600 hover:from-blue-700 hover:to-green-700"
+                    className="bg-[#1A3C34] hover:bg-[#15302a]"
                     onClick={() => setActiveSection('browse')}
                   >
                     Browse Projects
@@ -553,20 +553,20 @@ export function PartnerDashboard() {
             </div>
 
             <div className="grid grid-cols-3 gap-6 mb-8">
-              <Card className="p-6 bg-gradient-to-br from-blue-50 to-blue-100">
-                <div className="text-4xl font-bold text-blue-600 mb-2">$1.8M</div>
+              <Card className="p-6 bg-[#F0FDF4]">
+                <div className="text-4xl font-bold text-[#1A3C34] mb-2">$1.8M</div>
                 <div className="text-sm text-gray-700 mb-1">Total Investment</div>
-                <div className="text-xs text-green-600">+15% this quarter</div>
+                <div className="text-xs text-[#16a34a]">+15% this quarter</div>
               </Card>
-              <Card className="p-6 bg-gradient-to-br from-green-50 to-green-100">
-                <div className="text-4xl font-bold text-green-600 mb-2">23</div>
+              <Card className="p-6 bg-lime-50">
+                <div className="text-4xl font-bold text-[#16a34a] mb-2">23</div>
                 <div className="text-sm text-gray-700 mb-1">Research Outputs</div>
-                <div className="text-xs text-green-600">+8 this month</div>
+                <div className="text-xs text-[#16a34a]">+8 this month</div>
               </Card>
-              <Card className="p-6 bg-gradient-to-br from-purple-50 to-purple-100">
+              <Card className="p-6 bg-purple-50">
                 <div className="text-4xl font-bold text-purple-600 mb-2">4.2x</div>
                 <div className="text-sm text-gray-700 mb-1">ROI Multiplier</div>
-                <div className="text-xs text-green-600">Above average</div>
+                <div className="text-xs text-[#16a34a]">Above average</div>
               </Card>
             </div>
 
@@ -587,7 +587,7 @@ export function PartnerDashboard() {
                       </div>
                       <div className="w-full h-2 bg-gray-200 rounded-full overflow-hidden">
                         <div
-                          className="h-full bg-gradient-to-r from-blue-600 to-green-600"
+                          className="h-full bg-[#1A3C34]"
                           style={{ width: `${item.percentage}%` }}
                         />
                       </div>
@@ -599,19 +599,19 @@ export function PartnerDashboard() {
               <Card className="p-6">
                 <h3 className="text-lg font-bold mb-4">Impact Metrics</h3>
                 <div className="space-y-4">
-                  <div className="flex items-center justify-between p-4 bg-blue-50 rounded-lg">
+                  <div className="flex items-center justify-between p-4 bg-[#F0FDF4] rounded-lg">
                     <div>
                       <div className="text-sm text-gray-600">Publications Generated</div>
-                      <div className="text-2xl font-bold text-blue-600">23</div>
+                      <div className="text-2xl font-bold text-[#1A3C34]">23</div>
                     </div>
-                    <TrendingUp className="w-8 h-8 text-blue-600" />
+                    <TrendingUp className="w-8 h-8 text-[#1A3C34]" />
                   </div>
-                  <div className="flex items-center justify-between p-4 bg-green-50 rounded-lg">
+                  <div className="flex items-center justify-between p-4 bg-lime-50 rounded-lg">
                     <div>
                       <div className="text-sm text-gray-600">Total Citations</div>
-                      <div className="text-2xl font-bold text-green-600">487</div>
+                      <div className="text-2xl font-bold text-[#16a34a]">487</div>
                     </div>
-                    <Award className="w-8 h-8 text-green-600" />
+                    <Award className="w-8 h-8 text-[#16a34a]" />
                   </div>
                   <div className="flex items-center justify-between p-4 bg-purple-50 rounded-lg">
                     <div>
@@ -642,13 +642,13 @@ export function PartnerDashboard() {
                       <div className="flex items-center gap-6">
                         <div className="text-center">
                           <div className="text-sm text-gray-600">Performance</div>
-                          <div className="text-xl font-bold text-blue-600">{performance}%</div>
+                          <div className="text-xl font-bold text-[#1A3C34]">{performance}%</div>
                         </div>
                         <div className="text-center">
                           <div className="text-sm text-gray-600">ROI</div>
-                          <div className="text-xl font-bold text-green-600">{roi}x</div>
+                          <div className="text-xl font-bold text-[#16a34a]">{roi}x</div>
                         </div>
-                        <Badge className="bg-green-100 text-green-700">Excellent</Badge>
+                        <Badge className="bg-lime-100 text-[#15803d]">Excellent</Badge>
                       </div>
                     </div>
                   );

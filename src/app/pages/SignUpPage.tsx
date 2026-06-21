@@ -53,15 +53,15 @@ export function SignUpPage() {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-blue-50 via-white to-green-50">
+    <div className="min-h-screen bg-[#F2F3F5]">
       {/* Header */}
-      <div className="bg-white/80 backdrop-blur-md border-b border-blue-100">
+      <div className="bg-white/80 backdrop-blur-md border-b border-gray-200">
         <div className="max-w-4xl mx-auto px-6 py-4 flex items-center justify-between">
           <div className="flex items-center gap-2">
-            <div className="w-10 h-10 bg-gradient-to-br from-blue-600 to-green-600 rounded-lg flex items-center justify-center">
+            <div className="w-10 h-10 bg-[#1A3C34] rounded-lg flex items-center justify-center">
               <Brain className="w-6 h-6 text-white" />
             </div>
-            <span className="font-bold text-xl bg-gradient-to-r from-blue-600 to-green-600 bg-clip-text text-transparent">
+            <span className="font-bold text-xl text-[#1A3C34]">
               Research IQ
             </span>
           </div>
@@ -78,17 +78,17 @@ export function SignUpPage() {
           <div className="flex items-center justify-between mb-4">
             <StepIndicator number={1} title="Basic Info" active={step === 1} completed={step > 1} />
             <div className="flex-1 h-1 bg-gray-200 mx-4">
-              <div className={`h-full bg-gradient-to-r from-blue-600 to-green-600 transition-all ${step > 1 ? 'w-full' : 'w-0'}`} />
+              <div className={`h-full bg-[#1A3C34] transition-all ${step > 1 ? 'w-full' : 'w-0'}`} />
             </div>
             <StepIndicator number={2} title="Accreditation" active={step === 2} completed={step > 2} />
             <div className="flex-1 h-1 bg-gray-200 mx-4">
-              <div className={`h-full bg-gradient-to-r from-blue-600 to-green-600 transition-all ${step > 2 ? 'w-full' : 'w-0'}`} />
+              <div className={`h-full bg-[#1A3C34] transition-all ${step > 2 ? 'w-full' : 'w-0'}`} />
             </div>
             <StepIndicator number={3} title="Expertise" active={step === 3} completed={step > 3} />
           </div>
         </div>
 
-        <Card className="p-8 bg-white shadow-lg">
+        <Card className="p-8 bg-white shadow-sm">
           <form onSubmit={handleSubmit}>
             {step === 1 && (
               <div className="space-y-6">
@@ -96,7 +96,7 @@ export function SignUpPage() {
                   <h2 className="text-3xl font-bold mb-2">Create Researcher Account</h2>
                   <p className="text-gray-600">Apply to join Research IQ as an accredited researcher</p>
 
-                  <div className="bg-blue-50 border border-blue-200 rounded-lg p-4 mt-4">
+                  <div className="bg-[#F0FDF4] border border-[#1A3C34]/20 rounded-lg p-4 mt-4">
                     <p className="text-sm text-blue-900">
                       <strong>Note:</strong> This signup is for researchers only. Partner and Research Manager accounts are created by institutional administrators.
                     </p>
@@ -185,13 +185,13 @@ export function SignUpPage() {
                     required
                   />
                   <p className="text-sm text-gray-500 mt-1">
-                    Don't have an ORCID? <a href="https://orcid.org/register" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:underline">Register here</a>
+                    Don't have an ORCID? <a href="https://orcid.org/register" target="_blank" rel="noopener noreferrer" className="text-[#1A3C34] hover:underline">Register here</a>
                   </p>
                 </div>
 
                 <Button
                   type="button"
-                  className="w-full bg-gradient-to-r from-blue-600 to-green-600 hover:from-blue-700 hover:to-green-700"
+                  className="w-full bg-[#1A3C34] hover:bg-[#15302a]"
                   onClick={() => setStep(2)}
                 >
                   Continue
@@ -206,9 +206,9 @@ export function SignUpPage() {
                   <p className="text-gray-600">Help us verify your research credentials</p>
                 </div>
 
-                <div className="bg-blue-50 border border-blue-200 rounded-lg p-4 mb-6">
+                <div className="bg-[#F0FDF4] border border-[#1A3C34]/20 rounded-lg p-4 mb-6">
                   <div className="flex items-start gap-3">
-                    <AlertCircle className="w-5 h-5 text-blue-600 mt-0.5 flex-shrink-0" />
+                    <AlertCircle className="w-5 h-5 text-[#1A3C34] mt-0.5 flex-shrink-0" />
                     <div className="text-sm text-blue-900">
                       <p className="font-semibold mb-1">To be a fully accredited researcher, you must meet ONE of the following:</p>
                       <ul className="list-disc list-inside space-y-1 ml-2">
@@ -262,7 +262,7 @@ export function SignUpPage() {
                 <div>
                   <Label htmlFor="cv">Upload CV / Resume *</Label>
                   <div className="mt-2">
-                    <label className="flex flex-col items-center justify-center w-full h-32 border-2 border-dashed border-gray-300 rounded-lg cursor-pointer hover:border-blue-500 hover:bg-blue-50 transition-colors">
+                    <label className="flex flex-col items-center justify-center w-full h-32 border-2 border-dashed border-gray-300 rounded-lg cursor-pointer hover:border-blue-500 hover:bg-[#F0FDF4] transition-colors">
                       <div className="flex flex-col items-center justify-center pt-5 pb-6">
                         <Upload className="w-8 h-8 text-gray-400 mb-2" />
                         <p className="text-sm text-gray-500">
@@ -291,7 +291,7 @@ export function SignUpPage() {
                   </Button>
                   <Button
                     type="button"
-                    className="flex-1 bg-gradient-to-r from-blue-600 to-green-600 hover:from-blue-700 hover:to-green-700"
+                    className="flex-1 bg-[#1A3C34] hover:bg-[#15302a]"
                     onClick={() => setStep(3)}
                   >
                     Continue
@@ -332,9 +332,9 @@ export function SignUpPage() {
                   <p className="text-sm text-gray-500 mt-1">List your most significant publications (one per line)</p>
                 </div>
 
-                <div className="bg-green-50 border border-green-200 rounded-lg p-4">
+                <div className="bg-lime-50 border border-lime-300 rounded-lg p-4">
                   <div className="flex items-start gap-3">
-                    <CheckCircle2 className="w-5 h-5 text-green-600 mt-0.5 flex-shrink-0" />
+                    <CheckCircle2 className="w-5 h-5 text-[#16a34a] mt-0.5 flex-shrink-0" />
                     <div className="text-sm text-green-900">
                       <p className="font-semibold mb-1">Almost there!</p>
                       <p>Once you submit, your application will be reviewed by our institutional administrators. You'll receive an email notification within 2-3 business days.</p>
@@ -353,7 +353,7 @@ export function SignUpPage() {
                   </Button>
                   <Button
                     type="submit"
-                    className="flex-1 bg-gradient-to-r from-blue-600 to-green-600 hover:from-blue-700 hover:to-green-700"
+                    className="flex-1 bg-[#1A3C34] hover:bg-[#15302a]"
                   >
                     Submit Application
                   </Button>
@@ -368,7 +368,7 @@ export function SignUpPage() {
             Already have an account?{' '}
             <button
               onClick={() => navigate('/login')}
-              className="text-blue-600 hover:underline font-medium"
+              className="text-[#1A3C34] hover:underline font-medium"
             >
               Log in
             </button>
@@ -390,15 +390,15 @@ function StepIndicator({ number, title, active, completed }: {
       <div
         className={`w-12 h-12 rounded-full flex items-center justify-center font-bold mb-2 transition-all ${
           completed
-            ? 'bg-gradient-to-r from-blue-600 to-green-600 text-white'
+            ? 'bg-[#1A3C34] text-white'
             : active
-            ? 'bg-gradient-to-r from-blue-600 to-green-600 text-white'
+            ? 'bg-[#1A3C34] text-white'
             : 'bg-gray-200 text-gray-400'
         }`}
       >
         {completed ? <CheckCircle2 className="w-6 h-6" /> : number}
       </div>
-      <div className={`text-sm font-medium ${active || completed ? 'text-blue-600' : 'text-gray-400'}`}>
+      <div className={`text-sm font-medium ${active || completed ? 'text-[#1A3C34]' : 'text-gray-400'}`}>
         {title}
       </div>
     </div>

@@ -25,24 +25,24 @@ export function SystemAnnouncements({ limit }: { limit?: number }) {
   const getAnnouncementIcon = (type: string) => {
     switch (type) {
       case 'success':
-        return <CheckCircle className="w-5 h-5 text-green-600" />;
+        return <CheckCircle className="w-5 h-5 text-[#16a34a]" />;
       case 'warning':
         return <AlertCircle className="w-5 h-5 text-orange-600" />;
       case 'info':
       default:
-        return <Info className="w-5 h-5 text-blue-600" />;
+        return <Info className="w-5 h-5 text-[#1A3C34]" />;
     }
   };
 
   const getAnnouncementStyle = (type: string) => {
     switch (type) {
       case 'success':
-        return 'bg-green-50 border-green-200';
+        return 'bg-lime-50 border-lime-300';
       case 'warning':
         return 'bg-orange-50 border-orange-200';
       case 'info':
       default:
-        return 'bg-blue-50 border-blue-200';
+        return 'bg-[#F0FDF4] border-[#1A3C34]/20';
     }
   };
 
@@ -81,9 +81,9 @@ export function SystemAnnouncements({ limit }: { limit?: number }) {
                   <Badge
                     variant="outline"
                     className={`text-xs ${
-                      announcement.type === 'success' ? 'border-green-600 text-green-700' :
+                      announcement.type === 'success' ? 'border-green-600 text-[#15803d]' :
                       announcement.type === 'warning' ? 'border-orange-600 text-orange-700' :
-                      'border-blue-600 text-blue-700'
+                      'border-blue-600 text-[#1A3C34]'
                     }`}
                   >
                     {announcement.type}

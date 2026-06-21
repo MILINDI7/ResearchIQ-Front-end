@@ -56,14 +56,14 @@ export function SettingsPage() {
             return (
               <Card
                 key={section.id}
-                className={`p-6 cursor-pointer transition-all hover:shadow-lg ${
+                className={`p-6 cursor-pointer transition-all hover:shadow-sm ${
                   activeSection === section.id ? 'ring-2 ring-blue-600' : ''
                 }`}
                 onClick={() => setActiveSection(section.id)}
               >
                 <div className="flex items-start gap-4">
-                  <div className="w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center flex-shrink-0">
-                    <Icon className="w-6 h-6 text-blue-600" />
+                  <div className="w-12 h-12 bg-[#E8F5E9] rounded-full flex items-center justify-center flex-shrink-0">
+                    <Icon className="w-6 h-6 text-[#1A3C34]" />
                   </div>
                   <div className="flex-1 min-w-0">
                     <h3 className="font-bold mb-1">{section.label}</h3>
@@ -108,7 +108,7 @@ export function SettingsPage() {
                 <Input defaultValue={user.department} className="mt-2" />
               </div>
 
-              <Button className="bg-gradient-to-r from-blue-600 to-green-600 hover:from-blue-700 hover:to-green-700">
+              <Button className="bg-[#1A3C34] hover:bg-[#15302a]">
                 Save changes
               </Button>
             </div>
@@ -219,7 +219,7 @@ export function SettingsPage() {
                     <div className="font-medium text-center">Dark</div>
                   </Card>
                   <Card className="p-4 border-2 border-transparent hover:border-gray-300 cursor-pointer">
-                    <div className="aspect-video bg-gradient-to-br from-gray-900 to-white rounded mb-2" />
+                    <div className="aspect-video bg-gray-900 rounded mb-2" />
                     <div className="font-medium text-center">Auto</div>
                   </Card>
                 </div>

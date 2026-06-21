@@ -30,11 +30,11 @@ export function DataIntegration() {
   }
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-blue-50 via-white to-green-50">
-      <nav className="bg-white/80 backdrop-blur-md border-b border-blue-100">
+    <div className="min-h-screen bg-[#F2F3F5]">
+      <nav className="bg-white/80 backdrop-blur-md border-b border-gray-200">
         <div className="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
           <div className="flex items-center gap-2">
-            <div className="w-10 h-10 bg-gradient-to-br from-blue-600 to-green-600 rounded-lg flex items-center justify-center">
+            <div className="w-10 h-10 bg-[#1A3C34] rounded-lg flex items-center justify-center">
               <Brain className="w-6 h-6 text-white" />
             </div>
             <span className="font-bold text-xl">Data Integration</span>
@@ -55,15 +55,15 @@ export function DataIntegration() {
         {/* Stats */}
         <div className="grid grid-cols-4 gap-6 mb-8">
           <Card className="p-6">
-            <div className="text-3xl font-bold text-blue-600 mb-1">6</div>
+            <div className="text-3xl font-bold text-[#1A3C34] mb-1">6</div>
             <div className="text-sm text-gray-600">Connected Sources</div>
           </Card>
           <Card className="p-6">
-            <div className="text-3xl font-bold text-green-600 mb-1">8,079</div>
+            <div className="text-3xl font-bold text-[#16a34a] mb-1">8,079</div>
             <div className="text-sm text-gray-600">Total Records</div>
           </Card>
           <Card className="p-6">
-            <div className="text-3xl font-bold text-blue-600 mb-1">5</div>
+            <div className="text-3xl font-bold text-[#1A3C34] mb-1">5</div>
             <div className="text-sm text-gray-600">Active Syncs</div>
           </Card>
           <Card className="p-6">
@@ -76,17 +76,17 @@ export function DataIntegration() {
         <Card className="p-6">
           <div className="flex items-center justify-between mb-6">
             <h2 className="text-xl font-bold">Data Sources</h2>
-            <Button className="bg-gradient-to-r from-blue-600 to-green-600">
+            <Button className="bg-[#1A3C34]">
               + Add New Source
             </Button>
           </div>
 
           <div className="space-y-4">
             {dataSources.map(source => (
-              <div key={source.id} className="flex items-center justify-between p-4 border border-gray-200 rounded-lg hover:border-blue-300 transition-all">
+              <div key={source.id} className="flex items-center justify-between p-4 border border-gray-200 rounded-lg hover:border-[#1A3C34]/30 transition-all">
                 <div className="flex items-center gap-4">
-                  <div className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center">
-                    <Database className="w-6 h-6 text-blue-600" />
+                  <div className="w-12 h-12 bg-[#E8F5E9] rounded-lg flex items-center justify-center">
+                    <Database className="w-6 h-6 text-[#1A3C34]" />
                   </div>
                   <div>
                     <div className="font-bold">{source.name}</div>
@@ -104,8 +104,8 @@ export function DataIntegration() {
                     <div className="font-medium text-sm">{source.lastSync}</div>
                   </div>
                   <Badge className={
-                    source.status === 'Connected' ? 'bg-green-100 text-green-700' :
-                    source.status === 'Syncing' ? 'bg-blue-100 text-blue-700' :
+                    source.status === 'Connected' ? 'bg-lime-100 text-[#15803d]' :
+                    source.status === 'Syncing' ? 'bg-[#E8F5E9] text-[#1A3C34]' :
                     'bg-red-100 text-red-700'
                   }>
                     {source.status === 'Connected' && <CheckCircle className="w-3 h-3 mr-1" />}
@@ -131,7 +131,7 @@ export function DataIntegration() {
           <div className="space-y-3">
             <div className="flex items-center justify-between p-3 bg-gray-50 rounded-lg">
               <div className="flex items-center gap-3">
-                <CheckCircle className="w-5 h-5 text-green-600" />
+                <CheckCircle className="w-5 h-5 text-[#16a34a]" />
                 <div>
                   <div className="font-medium">Scopus Publications Sync</div>
                   <div className="text-sm text-gray-600">156 new records imported</div>
@@ -141,7 +141,7 @@ export function DataIntegration() {
             </div>
             <div className="flex items-center justify-between p-3 bg-gray-50 rounded-lg">
               <div className="flex items-center gap-3">
-                <CheckCircle className="w-5 h-5 text-green-600" />
+                <CheckCircle className="w-5 h-5 text-[#16a34a]" />
                 <div>
                   <div className="font-medium">ORCID Profile Update</div>
                   <div className="text-sm text-gray-600">12 profiles updated</div>

@@ -33,9 +33,9 @@ export function NotificationDropdown() {
   const getNotificationIcon = (type: string) => {
     switch (type) {
       case 'collaboration':
-        return <Users className="w-5 h-5 text-blue-600" />;
+        return <Users className="w-5 h-5 text-[#1A3C34]" />;
       case 'funding':
-        return <DollarSign className="w-5 h-5 text-green-600" />;
+        return <DollarSign className="w-5 h-5 text-[#16a34a]" />;
       case 'publication':
         return <FileText className="w-5 h-5 text-purple-600" />;
       case 'citation':
@@ -93,7 +93,7 @@ export function NotificationDropdown() {
       {isOpen && (
         <Card className="absolute right-0 top-12 w-96 max-h-[600px] shadow-xl border-2 border-gray-200 z-50 overflow-hidden">
           {/* Header */}
-          <div className="p-4 border-b border-gray-200 bg-gradient-to-r from-blue-50 to-green-50">
+          <div className="p-4 border-b border-gray-200 bg-[#F0FDF4]">
             <div className="flex items-center justify-between mb-2">
               <h3 className="font-bold text-lg">Notifications</h3>
               <button
@@ -133,7 +133,7 @@ export function NotificationDropdown() {
                     key={notification.id}
                     onClick={() => handleNotificationClick(notification)}
                     className={`p-4 cursor-pointer transition-all hover:bg-gray-50 ${
-                      !notification.read ? 'bg-blue-50/50' : ''
+                      !notification.read ? 'bg-[#F0FDF4]/50' : ''
                     }`}
                   >
                     <div className="flex gap-3">
@@ -146,7 +146,7 @@ export function NotificationDropdown() {
                             {notification.title}
                           </h4>
                           {!notification.read && (
-                            <div className="w-2 h-2 bg-blue-600 rounded-full flex-shrink-0 mt-1.5" />
+                            <div className="w-2 h-2 bg-[#1A3C34] rounded-full flex-shrink-0 mt-1.5" />
                           )}
                         </div>
                         <p className="text-sm text-gray-600 line-clamp-2 mb-2">

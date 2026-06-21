@@ -29,11 +29,11 @@ export function UserAccessManagement() {
   );
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-blue-50 via-white to-green-50">
-      <nav className="bg-white/80 backdrop-blur-md border-b border-blue-100">
+    <div className="min-h-screen bg-[#F2F3F5]">
+      <nav className="bg-white/80 backdrop-blur-md border-b border-gray-200">
         <div className="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
           <div className="flex items-center gap-2">
-            <div className="w-10 h-10 bg-gradient-to-br from-blue-600 to-green-600 rounded-lg flex items-center justify-center">
+            <div className="w-10 h-10 bg-[#1A3C34] rounded-lg flex items-center justify-center">
               <Brain className="w-6 h-6 text-white" />
             </div>
             <span className="font-bold text-xl">User & Access Management</span>
@@ -55,8 +55,8 @@ export function UserAccessManagement() {
         <div className="grid grid-cols-4 gap-6 mb-8">
           <Card className="p-6">
             <div className="flex items-center justify-between mb-4">
-              <div className="p-3 bg-blue-100 rounded-lg">
-                <Users className="w-6 h-6 text-blue-600" />
+              <div className="p-3 bg-[#E8F5E9] rounded-lg">
+                <Users className="w-6 h-6 text-[#1A3C34]" />
               </div>
             </div>
             <div className="text-3xl font-bold mb-1">{researchers.length}</div>
@@ -64,8 +64,8 @@ export function UserAccessManagement() {
           </Card>
           <Card className="p-6">
             <div className="flex items-center justify-between mb-4">
-              <div className="p-3 bg-green-100 rounded-lg">
-                <Shield className="w-6 h-6 text-green-600" />
+              <div className="p-3 bg-lime-100 rounded-lg">
+                <Shield className="w-6 h-6 text-[#16a34a]" />
               </div>
             </div>
             <div className="text-3xl font-bold mb-1">{researchers.filter(r => r.accredited).length}</div>
@@ -104,7 +104,7 @@ export function UserAccessManagement() {
         <Card className="p-6">
           <div className="flex items-center justify-between mb-6">
             <h2 className="text-xl font-bold">User Directory</h2>
-            <Button className="bg-gradient-to-r from-blue-600 to-green-600">
+            <Button className="bg-[#1A3C34]">
               Manage Roles & Permissions
             </Button>
           </div>
@@ -126,7 +126,7 @@ export function UserAccessManagement() {
                   <tr key={researcher.id} className="hover:bg-gray-50">
                     <td className="px-6 py-4">
                       <div className="flex items-center gap-3">
-                        <Avatar className="w-10 h-10 bg-gradient-to-br from-blue-500 to-green-500 flex items-center justify-center text-white font-bold">
+                        <Avatar className="w-10 h-10 bg-[#1A3C34] flex items-center justify-center text-white font-bold">
                           {researcher.name.charAt(0)}
                         </Avatar>
                         <div>
@@ -136,14 +136,14 @@ export function UserAccessManagement() {
                       </div>
                     </td>
                     <td className="px-6 py-4">
-                      <Badge className="bg-blue-100 text-blue-700">{researcher.role}</Badge>
+                      <Badge className="bg-[#E8F5E9] text-[#1A3C34]">{researcher.role}</Badge>
                     </td>
                     <td className="px-6 py-4 text-sm">{researcher.department}</td>
                     <td className="px-6 py-4">
                       <Badge variant="secondary">Full Access</Badge>
                     </td>
                     <td className="px-6 py-4">
-                      <Badge className={researcher.accredited ? 'bg-green-100 text-green-700' : 'bg-yellow-100 text-yellow-700'}>
+                      <Badge className={researcher.accredited ? 'bg-lime-100 text-[#15803d]' : 'bg-yellow-100 text-yellow-700'}>
                         {researcher.accredited ? 'Active' : 'Pending'}
                       </Badge>
                     </td>
@@ -167,7 +167,7 @@ export function UserAccessManagement() {
             <div className="p-4 border border-gray-200 rounded-lg">
               <div className="flex items-center justify-between mb-3">
                 <h3 className="font-bold">Researcher</h3>
-                <Badge className="bg-blue-100 text-blue-700">{researchers.filter(r => r.role === 'researcher').length} users</Badge>
+                <Badge className="bg-[#E8F5E9] text-[#1A3C34]">{researchers.filter(r => r.role === 'researcher').length} users</Badge>
               </div>
               <ul className="text-sm text-gray-600 space-y-1">
                 <li>✓ Upload research</li>
@@ -191,7 +191,7 @@ export function UserAccessManagement() {
             <div className="p-4 border border-gray-200 rounded-lg">
               <div className="flex items-center justify-between mb-3">
                 <h3 className="font-bold">Funding Partner</h3>
-                <Badge className="bg-green-100 text-green-700">{researchers.filter(r => r.role === 'partner').length} users</Badge>
+                <Badge className="bg-lime-100 text-[#15803d]">{researchers.filter(r => r.role === 'partner').length} users</Badge>
               </div>
               <ul className="text-sm text-gray-600 space-y-1">
                 <li>✓ Browse research projects</li>

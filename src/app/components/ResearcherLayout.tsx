@@ -32,16 +32,16 @@ export function ResearcherLayout({ children }: { children: React.ReactNode }) {
   ];
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-blue-50 via-white to-green-50">
+    <div className="min-h-screen bg-[#F2F3F5]">
       {/* Top Header */}
-      <header className="bg-white/80 backdrop-blur-md border-b border-blue-100 sticky top-0 z-50">
+      <header className="bg-white border-b border-gray-200 sticky top-0 z-50">
         <div className="px-6 py-3 flex items-center justify-between">
           <div className="flex items-center gap-6">
             <div className="flex items-center gap-2 cursor-pointer" onClick={() => navigate('/feed')}>
-              <div className="w-10 h-10 bg-gradient-to-br from-blue-600 to-green-600 rounded-lg flex items-center justify-center">
+              <div className="w-10 h-10 bg-[#1A3C34] rounded-lg flex items-center justify-center">
                 <Brain className="w-6 h-6 text-white" />
               </div>
-              <span className="font-bold text-xl bg-gradient-to-r from-blue-600 to-green-600 bg-clip-text text-transparent">
+              <span className="font-bold text-xl text-[#1A3C34]">
                 Research IQ
               </span>
             </div>
@@ -57,7 +57,7 @@ export function ResearcherLayout({ children }: { children: React.ReactNode }) {
 
           <div className="flex items-center gap-4">
             <Button
-              className="bg-gradient-to-r from-blue-600 to-green-600 hover:from-blue-700 hover:to-green-700"
+              className="bg-[#1A3C34] hover:bg-[#15302a]"
               onClick={() => navigate('/researcher/upload')}
             >
               <Plus className="w-4 h-4 mr-2" />
@@ -67,7 +67,7 @@ export function ResearcherLayout({ children }: { children: React.ReactNode }) {
             <NotificationDropdown />
 
             <Avatar
-              className="w-10 h-10 bg-gradient-to-br from-blue-500 to-green-500 flex items-center justify-center text-white font-bold cursor-pointer"
+              className="w-10 h-10 bg-[#1A3C34] flex items-center justify-center text-white font-bold cursor-pointer"
               onClick={() => navigate('/my-profile')}
             >
               {user?.name.charAt(0)}
@@ -82,10 +82,10 @@ export function ResearcherLayout({ children }: { children: React.ReactNode }) {
           <div className="p-4">
             {/* User Profile Section */}
             <div
-              className="flex items-center gap-3 p-3 rounded-lg bg-gradient-to-r from-blue-50 to-green-50 mb-6 cursor-pointer hover:shadow-md transition-all"
+              className="flex items-center gap-3 p-3 rounded-lg bg-[#F0FDF4] mb-6 cursor-pointer hover:shadow-md transition-all"
               onClick={() => navigate('/my-profile')}
             >
-              <Avatar className="w-12 h-12 bg-gradient-to-br from-blue-500 to-green-500 flex items-center justify-center text-white font-bold">
+              <Avatar className="w-12 h-12 bg-[#1A3C34] flex items-center justify-center text-white font-bold">
                 {user?.name.charAt(0)}
               </Avatar>
               <div className="flex-1 min-w-0">
@@ -108,14 +108,14 @@ export function ResearcherLayout({ children }: { children: React.ReactNode }) {
                       onClick={() => navigate(item.path)}
                       className={`w-full flex items-center gap-3 px-3 py-2.5 rounded-lg text-sm transition-all ${
                         isActive
-                          ? 'bg-blue-600 text-white font-medium'
+                          ? 'bg-[#1A3C34] text-white font-medium rounded-lg'
                           : 'text-gray-700 hover:bg-gray-100'
                       }`}
                     >
                       <Icon className="w-5 h-5" />
                       <span className="flex-1 text-left">{item.label}</span>
                       {item.badge !== undefined && item.badge > 0 && (
-                        <Badge className={`${isActive ? 'bg-white text-blue-600' : 'bg-red-500 text-white'} text-xs px-2 py-0.5`}>
+                        <Badge className={`${isActive ? 'bg-white text-[#1A3C34]' : 'bg-red-500 text-white'} text-xs px-2 py-0.5`}>
                           {item.badge}
                         </Badge>
                       )}
@@ -139,7 +139,7 @@ export function ResearcherLayout({ children }: { children: React.ReactNode }) {
                       onClick={() => navigate(item.path)}
                       className={`w-full flex items-center gap-3 px-3 py-2.5 rounded-lg text-sm transition-all ${
                         isActive
-                          ? 'bg-blue-600 text-white font-medium'
+                          ? 'bg-[#1A3C34] text-white font-medium rounded-lg'
                           : 'text-gray-700 hover:bg-gray-100'
                       }`}
                     >

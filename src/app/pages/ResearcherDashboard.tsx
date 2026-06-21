@@ -52,39 +52,39 @@ export function ResearcherDashboard() {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-blue-50 via-white to-green-50">
+    <div className="min-h-screen bg-[#F2F3F5]">
       {/* Top Navigation */}
-      <nav className="bg-white/80 backdrop-blur-md border-b border-blue-100 sticky top-0 z-50">
+      <nav className="bg-white border-b border-gray-200 sticky top-0 z-50">
         <div className="max-w-7xl mx-auto px-6 py-4">
           <div className="flex items-center justify-between">
             <div className="flex items-center gap-8">
               <div className="flex items-center gap-2">
-                <div className="w-10 h-10 bg-gradient-to-br from-blue-600 to-green-600 rounded-lg flex items-center justify-center">
+                <div className="w-10 h-10 bg-[#1A3C34] rounded-lg flex items-center justify-center">
                   <Brain className="w-6 h-6 text-white" />
                 </div>
-                <span className="font-bold text-xl bg-gradient-to-r from-blue-600 to-green-600 bg-clip-text text-transparent">
+                <span className="font-bold text-xl text-[#1A3C34]">
                   Research IQ
                 </span>
               </div>
 
               <div className="flex items-center gap-6">
-                <button className="text-gray-600 hover:text-blue-600 transition-colors font-medium">
+                <button className="text-gray-600 hover:text-[#1A3C34] transition-colors font-medium">
                   Dashboard
                 </button>
                 <button
-                  className="text-gray-600 hover:text-blue-600 transition-colors font-medium"
+                  className="text-gray-600 hover:text-[#1A3C34] transition-colors font-medium"
                   onClick={() => navigate('/collaborators')}
                 >
                   Collaborators
                 </button>
                 <button
-                  className="text-gray-600 hover:text-blue-600 transition-colors font-medium"
+                  className="text-gray-600 hover:text-[#1A3C34] transition-colors font-medium"
                   onClick={() => navigate('/trends')}
                 >
                   Trends
                 </button>
                 <button
-                  className="text-gray-600 hover:text-blue-600 transition-colors font-medium"
+                  className="text-gray-600 hover:text-[#1A3C34] transition-colors font-medium"
                   onClick={() => navigate('/funding')}
                 >
                   Funding
@@ -99,7 +99,7 @@ export function ResearcherDashboard() {
               </button>
 
               <div className="flex items-center gap-3 pl-4 border-l border-gray-200">
-                <Avatar className="w-10 h-10 bg-gradient-to-br from-blue-500 to-green-500 flex items-center justify-center text-white font-bold">
+                <Avatar className="w-10 h-10 bg-[#1A3C34] flex items-center justify-center text-white font-bold">
                   {user.name.charAt(0)}
                 </Avatar>
                 <div className="text-left">
@@ -193,7 +193,7 @@ export function ResearcherDashboard() {
           {/* Left Column */}
           <div className="col-span-2 space-y-6">
             {/* AI Insights - INNOVATIVE FEATURE */}
-            <Card className="p-6 bg-gradient-to-br from-blue-600 to-green-600 text-white">
+            <Card className="p-6 bg-lime-400 text-[#111111]">
               <div className="flex items-start gap-4">
                 <div className="p-3 bg-white/20 rounded-lg">
                   <Sparkles className="w-6 h-6" />
@@ -215,7 +215,7 @@ export function ResearcherDashboard() {
                       </p>
                       <Button
                         size="sm"
-                        className="mt-3 bg-white text-blue-600 hover:bg-gray-100"
+                        className="mt-3 bg-white text-[#1A3C34] hover:bg-gray-100"
                         onClick={() => navigate('/collaborators')}
                       >
                         View Profile
@@ -232,7 +232,7 @@ export function ResearcherDashboard() {
                       </p>
                       <Button
                         size="sm"
-                        className="mt-3 bg-white text-green-600 hover:bg-gray-100"
+                        className="mt-3 bg-white text-[#16a34a] hover:bg-gray-100"
                         onClick={() => navigate('/funding')}
                       >
                         View Details
@@ -260,10 +260,10 @@ export function ResearcherDashboard() {
               <div className="space-y-4">
                 {userResearch.length > 0 ? (
                   userResearch.map(r => (
-                    <div key={r.id} className="p-4 border border-gray-200 rounded-lg hover:border-blue-300 hover:shadow-md transition-all cursor-pointer">
+                    <div key={r.id} className="p-4 border border-gray-200 rounded-lg hover:border-[#1A3C34]/30 hover:shadow-md transition-all cursor-pointer">
                       <div className="flex items-start justify-between">
                         <div className="flex-1">
-                          <h4 className="font-bold mb-2 text-blue-600">{r.title}</h4>
+                          <h4 className="font-bold mb-2 text-[#1A3C34]">{r.title}</h4>
                           <p className="text-sm text-gray-600 mb-3 line-clamp-2">{r.abstract}</p>
                           <div className="flex items-center gap-4 text-sm text-gray-500">
                             <span>{r.authors.join(', ')}</span>
@@ -281,7 +281,7 @@ export function ResearcherDashboard() {
                           </div>
                         </div>
                         <Badge className={
-                          r.fundingStatus === 'funded' ? 'bg-green-100 text-green-700' :
+                          r.fundingStatus === 'funded' ? 'bg-lime-100 text-[#15803d]' :
                           r.fundingStatus === 'seeking' ? 'bg-yellow-100 text-yellow-700' :
                           'bg-gray-100 text-gray-700'
                         }>
@@ -362,11 +362,11 @@ export function ResearcherDashboard() {
                 {potentialCollaborators.map(researcher => (
                   <div
                     key={researcher.id}
-                    className="p-4 border border-gray-200 rounded-lg hover:border-blue-300 hover:shadow-md transition-all cursor-pointer"
+                    className="p-4 border border-gray-200 rounded-lg hover:border-[#1A3C34]/30 hover:shadow-md transition-all cursor-pointer"
                     onClick={() => navigate(`/researcher/profile/${researcher.id}`)}
                   >
                     <div className="flex items-start gap-3">
-                      <Avatar className="w-12 h-12 bg-gradient-to-br from-blue-500 to-green-500 flex items-center justify-center text-white font-bold flex-shrink-0">
+                      <Avatar className="w-12 h-12 bg-[#1A3C34] flex items-center justify-center text-white font-bold flex-shrink-0">
                         {researcher.name.charAt(0)}
                       </Avatar>
                       <div className="flex-1 min-w-0">
@@ -379,7 +379,7 @@ export function ResearcherDashboard() {
                             </Badge>
                           ))}
                         </div>
-                        <div className="mt-2 text-xs text-green-600 font-medium">
+                        <div className="mt-2 text-xs text-[#16a34a] font-medium">
                           {Math.floor(Math.random() * 30 + 70)}% Match
                         </div>
                       </div>
@@ -401,7 +401,7 @@ export function ResearcherDashboard() {
             </Card>
 
             {/* Upcoming Events */}
-            <Card className="p-6 bg-gradient-to-br from-green-50 to-blue-50 border-2 border-green-200">
+            <Card className="p-6 bg-lime-50 border-2 border-lime-300">
               <h3 className="text-lg font-bold mb-4">Upcoming Events</h3>
               <div className="space-y-3">
                 <div className="p-3 bg-white rounded-lg">
@@ -428,8 +428,8 @@ function StatCard({ icon, label, value, change, color }: {
   change: string;
   color: 'blue' | 'green';
 }) {
-  const bgColor = color === 'blue' ? 'bg-blue-100' : 'bg-green-100';
-  const textColor = color === 'blue' ? 'text-blue-600' : 'text-green-600';
+  const bgColor = color === 'blue' ? 'bg-[#E8F5E9]' : 'bg-lime-100';
+  const textColor = color === 'blue' ? 'text-[#1A3C34]' : 'text-[#16a34a]';
 
   return (
     <Card className="p-6">
@@ -440,7 +440,7 @@ function StatCard({ icon, label, value, change, color }: {
       </div>
       <div className="text-3xl font-bold mb-1">{value}</div>
       <div className="text-sm text-gray-600 mb-2">{label}</div>
-      <div className="text-xs text-green-600 font-medium">{change}</div>
+      <div className="text-xs text-[#16a34a] font-medium">{change}</div>
     </Card>
   );
 }
@@ -452,8 +452,8 @@ function QuickActionCard({ icon, title, description, color, onClick }: {
   color: 'blue' | 'green';
   onClick: () => void;
 }) {
-  const bgColor = color === 'blue' ? 'bg-blue-100 hover:bg-blue-200' : 'bg-green-100 hover:bg-green-200';
-  const textColor = color === 'blue' ? 'text-blue-600' : 'text-green-600';
+  const bgColor = color === 'blue' ? 'bg-lime-100 hover:bg-lime-200' : 'bg-lime-100 hover:bg-lime-200';
+  const textColor = color === 'blue' ? 'text-[#1A3C34]' : 'text-[#16a34a]';
 
   return (
     <button
@@ -480,7 +480,7 @@ function TrendItem({ topic, growth, papers, trend }: {
         <div className="text-sm text-gray-500">{papers} papers published</div>
       </div>
       <div className="text-right">
-        <div className="text-green-600 font-bold">{growth}</div>
+        <div className="text-[#16a34a] font-bold">{growth}</div>
         <div className="text-xs text-gray-500">this month</div>
       </div>
     </div>
@@ -492,7 +492,7 @@ function MetricBar({ label, value, color }: {
   value: number;
   color: 'blue' | 'green';
 }) {
-  const barColor = color === 'blue' ? 'bg-blue-600' : 'bg-green-600';
+  const barColor = color === 'blue' ? 'bg-[#1A3C34]' : 'bg-lime-500';
 
   return (
     <div>

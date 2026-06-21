@@ -92,17 +92,17 @@ export function AdminDashboard() {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-blue-50 via-white to-green-50">
+    <div className="min-h-screen bg-[#F2F3F5]">
       {/* Top Navigation */}
-      <nav className="bg-white/80 backdrop-blur-md border-b border-blue-100 sticky top-0 z-50">
+      <nav className="bg-white border-b border-gray-200 sticky top-0 z-50">
         <div className="max-w-7xl mx-auto px-6 py-4">
           <div className="flex items-center justify-between">
             <div className="flex items-center gap-8">
               <div className="flex items-center gap-2">
-                <div className="w-10 h-10 bg-gradient-to-br from-blue-600 to-green-600 rounded-lg flex items-center justify-center">
+                <div className="w-10 h-10 bg-[#1A3C34] rounded-lg flex items-center justify-center">
                   <Brain className="w-6 h-6 text-white" />
                 </div>
-                <span className="font-bold text-xl bg-gradient-to-r from-blue-600 to-green-600 bg-clip-text text-transparent">
+                <span className="font-bold text-xl text-[#1A3C34]">
                   Research IQ Admin
                 </span>
               </div>
@@ -119,7 +119,7 @@ export function AdminDashboard() {
               </button>
 
               <div className="flex items-center gap-3 pl-4 border-l border-gray-200">
-                <Avatar className="w-10 h-10 bg-gradient-to-br from-blue-500 to-green-500 flex items-center justify-center text-white font-bold">
+                <Avatar className="w-10 h-10 bg-[#1A3C34] flex items-center justify-center text-white font-bold">
                   A
                 </Avatar>
                 <div className="text-left">
@@ -149,7 +149,7 @@ export function AdminDashboard() {
             onClick={() => setActiveTab('accreditations')}
             className={`pb-3 px-2 font-medium transition-all ${
               activeTab === 'accreditations'
-                ? 'text-blue-600 border-b-2 border-blue-600'
+                ? 'text-[#1A3C34] border-b-2 border-blue-600'
                 : 'text-gray-600 hover:text-gray-900'
             }`}
           >
@@ -159,7 +159,7 @@ export function AdminDashboard() {
             onClick={() => setActiveTab('users')}
             className={`pb-3 px-2 font-medium transition-all ${
               activeTab === 'users'
-                ? 'text-blue-600 border-b-2 border-blue-600'
+                ? 'text-[#1A3C34] border-b-2 border-blue-600'
                 : 'text-gray-600 hover:text-gray-900'
             }`}
           >
@@ -171,7 +171,7 @@ export function AdminDashboard() {
         {activeTab === 'users' && (
           <div className="flex gap-4 mb-8">
             <Button
-              className="bg-gradient-to-r from-blue-600 to-green-600 hover:from-blue-700 hover:to-green-700"
+              className="bg-[#1A3C34] hover:bg-[#15302a]"
               onClick={() => setShowCreateStaff(true)}
             >
               <UserPlus className="w-4 h-4 mr-2" />
@@ -195,35 +195,35 @@ export function AdminDashboard() {
 
           <Card className="p-6">
             <div className="flex items-center justify-between mb-4">
-              <div className="p-3 bg-green-100 rounded-lg text-green-600">
+              <div className="p-3 bg-lime-100 rounded-lg text-[#16a34a]">
                 <Users className="w-6 h-6" />
               </div>
             </div>
             <div className="text-3xl font-bold mb-1">{researchers.length}</div>
             <div className="text-sm text-gray-600 mb-2">Accredited Researchers</div>
-            <div className="text-xs text-green-600 font-medium">+2 this week</div>
+            <div className="text-xs text-[#16a34a] font-medium">+2 this week</div>
           </Card>
 
           <Card className="p-6">
             <div className="flex items-center justify-between mb-4">
-              <div className="p-3 bg-blue-100 rounded-lg text-blue-600">
+              <div className="p-3 bg-[#E8F5E9] rounded-lg text-[#1A3C34]">
                 <FileText className="w-6 h-6" />
               </div>
             </div>
             <div className="text-3xl font-bold mb-1">5,234</div>
             <div className="text-sm text-gray-600 mb-2">Total Publications</div>
-            <div className="text-xs text-blue-600 font-medium">+156 this month</div>
+            <div className="text-xs text-[#1A3C34] font-medium">+156 this month</div>
           </Card>
 
           <Card className="p-6">
             <div className="flex items-center justify-between mb-4">
-              <div className="p-3 bg-green-100 rounded-lg text-green-600">
+              <div className="p-3 bg-lime-100 rounded-lg text-[#16a34a]">
                 <TrendingUp className="w-6 h-6" />
               </div>
             </div>
             <div className="text-3xl font-bold mb-1">95%</div>
             <div className="text-sm text-gray-600 mb-2">Approval Rate</div>
-            <div className="text-xs text-green-600 font-medium">Last 30 days</div>
+            <div className="text-xs text-[#16a34a] font-medium">Last 30 days</div>
           </Card>
         </div>
 
@@ -250,10 +250,10 @@ export function AdminDashboard() {
               {pendingResearchers.map(researcher => (
                 <div
                   key={researcher.id}
-                  className="border border-gray-200 rounded-lg p-6 hover:border-blue-300 hover:shadow-md transition-all"
+                  className="border border-gray-200 rounded-lg p-6 hover:border-[#1A3C34]/30 hover:shadow-md transition-all"
                 >
                   <div className="flex items-start gap-6">
-                    <Avatar className="w-16 h-16 bg-gradient-to-br from-blue-500 to-green-500 flex items-center justify-center text-white font-bold text-2xl flex-shrink-0">
+                    <Avatar className="w-16 h-16 bg-[#1A3C34] flex items-center justify-center text-white font-bold text-2xl flex-shrink-0">
                       {researcher.name.charAt(0)}
                     </Avatar>
 
@@ -279,17 +279,17 @@ export function AdminDashboard() {
                       </div>
 
                       <div className="grid grid-cols-3 gap-4 mb-4">
-                        <div className="bg-blue-50 p-4 rounded-lg">
+                        <div className="bg-[#F0FDF4] p-4 rounded-lg">
                           <div className="text-sm text-gray-600 mb-1">Highest Degree</div>
-                          <div className="font-bold text-blue-600">{researcher.degree.toUpperCase()}</div>
+                          <div className="font-bold text-[#1A3C34]">{researcher.degree.toUpperCase()}</div>
                         </div>
-                        <div className="bg-green-50 p-4 rounded-lg">
+                        <div className="bg-lime-50 p-4 rounded-lg">
                           <div className="text-sm text-gray-600 mb-1">Experience</div>
-                          <div className="font-bold text-green-600">{researcher.experience} years</div>
+                          <div className="font-bold text-[#16a34a]">{researcher.experience} years</div>
                         </div>
-                        <div className="bg-blue-50 p-4 rounded-lg">
+                        <div className="bg-[#F0FDF4] p-4 rounded-lg">
                           <div className="text-sm text-gray-600 mb-1">Publications</div>
-                          <div className="font-bold text-blue-600">{researcher.publications.length}</div>
+                          <div className="font-bold text-[#1A3C34]">{researcher.publications.length}</div>
                         </div>
                       </div>
 
@@ -305,9 +305,9 @@ export function AdminDashboard() {
                       </div>
 
                       {/* Accreditation Check */}
-                      <div className="bg-green-50 border border-green-200 rounded-lg p-4 mb-4">
+                      <div className="bg-lime-50 border border-lime-300 rounded-lg p-4 mb-4">
                         <div className="flex items-start gap-2">
-                          <CheckCircle className="w-5 h-5 text-green-600 mt-0.5 flex-shrink-0" />
+                          <CheckCircle className="w-5 h-5 text-[#16a34a] mt-0.5 flex-shrink-0" />
                           <div>
                             <div className="font-semibold text-green-900 mb-1">Accreditation Requirements Met</div>
                             <div className="text-sm text-green-800">
@@ -330,7 +330,7 @@ export function AdminDashboard() {
                         </Button>
                         <Button
                           size="sm"
-                          className="bg-green-600 hover:bg-green-700 text-white"
+                          className="bg-lime-500 hover:bg-green-700 text-white"
                           onClick={() => handleApprove(researcher.id)}
                         >
                           <CheckCircle className="w-4 h-4 mr-2" />
@@ -360,11 +360,11 @@ export function AdminDashboard() {
             {researchers.slice(0, 6).map(researcher => (
               <div
                 key={researcher.id}
-                className="border border-gray-200 rounded-lg p-4 hover:border-blue-300 transition-all cursor-pointer"
+                className="border border-gray-200 rounded-lg p-4 hover:border-[#1A3C34]/30 transition-all cursor-pointer"
                 onClick={() => navigate(`/researcher/profile/${researcher.id}`)}
               >
                 <div className="flex items-center gap-3 mb-3">
-                  <Avatar className="w-12 h-12 bg-gradient-to-br from-blue-500 to-green-500 flex items-center justify-center text-white font-bold">
+                  <Avatar className="w-12 h-12 bg-[#1A3C34] flex items-center justify-center text-white font-bold">
                     {researcher.name.charAt(0)}
                   </Avatar>
                   <div className="flex-1 min-w-0">
@@ -374,7 +374,7 @@ export function AdminDashboard() {
                 </div>
                 <div className="flex items-center justify-between text-xs">
                   <span className="text-gray-600">{researcher.publications} pubs</span>
-                  <Badge className="bg-green-100 text-green-700 text-xs">Verified</Badge>
+                  <Badge className="bg-lime-100 text-[#15803d] text-xs">Verified</Badge>
                 </div>
               </div>
             ))}
@@ -420,7 +420,7 @@ export function AdminDashboard() {
                     <tr key={researcher.id} className="hover:bg-gray-50 transition-colors">
                       <td className="px-6 py-4">
                         <div className="flex items-center gap-3">
-                          <Avatar className="w-10 h-10 bg-gradient-to-br from-blue-500 to-green-500 flex items-center justify-center text-white font-bold">
+                          <Avatar className="w-10 h-10 bg-[#1A3C34] flex items-center justify-center text-white font-bold">
                             {researcher.name.charAt(0)}
                           </Avatar>
                           <div>
@@ -431,8 +431,8 @@ export function AdminDashboard() {
                       </td>
                       <td className="px-6 py-4">
                         <Badge className={
-                          researcher.role === 'researcher' ? 'bg-blue-100 text-blue-700' :
-                          researcher.role === 'partner' ? 'bg-green-100 text-green-700' :
+                          researcher.role === 'researcher' ? 'bg-[#E8F5E9] text-[#1A3C34]' :
+                          researcher.role === 'partner' ? 'bg-lime-100 text-[#15803d]' :
                           researcher.role === 'manager' ? 'bg-purple-100 text-purple-700' :
                           'bg-gray-100 text-gray-700'
                         }>
@@ -459,7 +459,7 @@ export function AdminDashboard() {
                       </td>
                       <td className="px-6 py-4">
                         <Badge className={
-                          researcher.accredited ? 'bg-green-100 text-green-700' : 'bg-yellow-100 text-yellow-700'
+                          researcher.accredited ? 'bg-lime-100 text-[#15803d]' : 'bg-yellow-100 text-yellow-700'
                         }>
                           {researcher.accredited ? 'Accredited' : 'Pending'}
                         </Badge>
@@ -502,7 +502,7 @@ export function AdminDashboard() {
 
               <div className="space-y-6">
                 <div className="flex items-start gap-4">
-                  <Avatar className="w-20 h-20 bg-gradient-to-br from-blue-500 to-green-500 flex items-center justify-center text-white font-bold text-3xl">
+                  <Avatar className="w-20 h-20 bg-[#1A3C34] flex items-center justify-center text-white font-bold text-3xl">
                     {selectedProfile.name.charAt(0)}
                   </Avatar>
                   <div className="flex-1">
@@ -554,7 +554,7 @@ export function AdminDashboard() {
 
                 <div className="flex gap-3 pt-4 border-t">
                   <Button
-                    className="flex-1 bg-green-600 hover:bg-green-700"
+                    className="flex-1 bg-lime-500 hover:bg-green-700"
                     onClick={() => handleApprove(selectedProfile.id)}
                   >
                     <CheckCircle className="w-4 h-4 mr-2" />
@@ -648,9 +648,9 @@ export function AdminDashboard() {
               </div>
             </div>
 
-            <div className="bg-blue-50 border border-blue-200 rounded-lg p-4">
+            <div className="bg-[#F0FDF4] border border-[#1A3C34]/20 rounded-lg p-4">
               <div className="flex items-start gap-3">
-                <CheckCircle className="w-5 h-5 text-blue-600 mt-0.5 flex-shrink-0" />
+                <CheckCircle className="w-5 h-5 text-[#1A3C34] mt-0.5 flex-shrink-0" />
                 <div className="text-sm text-blue-900">
                   <p className="font-semibold mb-1">Account Credentials</p>
                   <p>The user will receive an email with login credentials and instructions to set up their account. Default password: <strong>Change@123</strong></p>
@@ -669,7 +669,7 @@ export function AdminDashboard() {
               </Button>
               <Button
                 type="submit"
-                className="flex-1 bg-gradient-to-r from-blue-600 to-green-600 hover:from-blue-700 hover:to-green-700"
+                className="flex-1 bg-[#1A3C34] hover:bg-[#15302a]"
               >
                 Create Account
               </Button>

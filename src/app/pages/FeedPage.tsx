@@ -85,7 +85,7 @@ export function FeedPage() {
               const isLiked = likedPosts.has(post.id);
 
               return (
-                <Card key={post.id} className="overflow-hidden hover:shadow-xl transition-all">
+                <Card key={post.id} className="overflow-hidden hover:shadow-md transition-all">
                   {/* Author Header */}
                   <div className="p-4 flex items-center justify-between">
                     <div className="flex items-center gap-3">
@@ -98,7 +98,7 @@ export function FeedPage() {
                         />
                       ) : (
                         <Avatar
-                          className="w-12 h-12 bg-gradient-to-br from-blue-500 to-green-500 flex items-center justify-center text-white font-bold cursor-pointer"
+                          className="w-12 h-12 bg-[#1A3C34] flex items-center justify-center text-white font-bold cursor-pointer"
                           onClick={() => navigate(`/researcher/profile/${author?.id}`)}
                         >
                           {author?.name.charAt(0)}
@@ -113,7 +113,7 @@ export function FeedPage() {
                         </div>
                       </div>
                     </div>
-                    <Badge className="bg-green-100 text-green-700">
+                    <Badge className="bg-lime-100 text-[#15803d]">
                       {post.fundingStatus === 'seeking' ? 'Seeking Funding' : post.fundingStatus}
                     </Badge>
                   </div>
@@ -139,23 +139,23 @@ export function FeedPage() {
                         <Heart className={`w-6 h-6 ${isLiked ? 'fill-red-600 text-red-600' : ''}`} />
                         <span className="font-medium">{(post.likes || 0) + (isLiked ? 1 : 0)}</span>
                       </button>
-                      <button className="flex items-center gap-2 text-gray-600 hover:text-blue-600 transition-colors">
+                      <button className="flex items-center gap-2 text-gray-600 hover:text-[#1A3C34] transition-colors">
                         <MessageCircle className="w-6 h-6" />
                         <span className="font-medium">{post.comments || 0}</span>
                       </button>
-                      <button className="flex items-center gap-2 text-gray-600 hover:text-green-600 transition-colors">
+                      <button className="flex items-center gap-2 text-gray-600 hover:text-[#16a34a] transition-colors">
                         <Share2 className="w-6 h-6" />
                         <span className="font-medium">{post.shares || 0}</span>
                       </button>
                     </div>
-                    <button className="text-gray-600 hover:text-blue-600 transition-colors">
+                    <button className="text-gray-600 hover:text-[#1A3C34] transition-colors">
                       <Bookmark className="w-6 h-6" />
                     </button>
                   </div>
 
                   {/* Content */}
                   <div className="p-4">
-                    <h3 className="text-xl font-bold mb-2 text-blue-600">{post.title}</h3>
+                    <h3 className="text-xl font-bold mb-2 text-[#1A3C34]">{post.title}</h3>
                     <p className="text-gray-700 mb-4 leading-relaxed">{post.abstract}</p>
 
                     <div className="flex flex-wrap gap-2 mb-4">
@@ -175,7 +175,7 @@ export function FeedPage() {
                         View more
                       </Button>
                       <Button
-                        className="flex-1 bg-gradient-to-r from-blue-600 to-green-600 hover:from-blue-700 hover:to-green-700"
+                        className="flex-1 bg-[#1A3C34] hover:bg-[#15302a]"
                         onClick={() => setCollaborationRequest(post.id)}
                       >
                         Request collaboration
@@ -193,14 +193,14 @@ export function FeedPage() {
           {/* Trending Topics */}
           <Card className="p-4">
             <div className="flex items-center gap-2 mb-4">
-              <TrendingUp className="w-5 h-5 text-green-600" />
+              <TrendingUp className="w-5 h-5 text-[#16a34a]" />
               <h3 className="font-bold">Trending topics</h3>
             </div>
             <div className="space-y-3">
               {trendingTopics.map(topic => (
                 <div key={topic.topic} className="flex items-center justify-between">
                   <div className="font-medium text-sm">{topic.topic}</div>
-                  <Badge className="bg-green-100 text-green-700 text-xs">
+                  <Badge className="bg-lime-100 text-[#15803d] text-xs">
                     {topic.growth}
                   </Badge>
                 </div>
@@ -209,9 +209,9 @@ export function FeedPage() {
           </Card>
 
           {/* Active Collaborations */}
-          <Card className="p-4 bg-gradient-to-br from-blue-50 to-green-50">
+          <Card className="p-4 bg-[#F0FDF4]">
             <div className="flex items-center gap-2 mb-4">
-              <UsersIcon className="w-5 h-5 text-blue-600" />
+              <UsersIcon className="w-5 h-5 text-[#1A3C34]" />
               <h3 className="font-bold">Active collaborations</h3>
             </div>
             <div className="space-y-3">
@@ -219,14 +219,14 @@ export function FeedPage() {
                 <div key={collab.name} className="bg-white rounded-lg p-3">
                   <div className="flex items-center justify-between mb-2">
                     <div className="font-medium text-sm">{collab.name}</div>
-                    <Badge className="bg-blue-100 text-blue-700 text-xs">
+                    <Badge className="bg-[#E8F5E9] text-[#1A3C34] text-xs">
                       {collab.efficiency}
                     </Badge>
                   </div>
                   <div className="text-xs text-gray-600">{collab.topic}</div>
                   <div className="mt-2 w-full h-1.5 bg-gray-200 rounded-full overflow-hidden">
                     <div
-                      className="h-full bg-gradient-to-r from-blue-600 to-green-600"
+                      className="h-full bg-[#1A3C34]"
                       style={{ width: collab.efficiency }}
                     />
                   </div>
@@ -239,7 +239,7 @@ export function FeedPage() {
           </Card>
 
           {/* AI Suggestions */}
-          <Card className="p-4 bg-gradient-to-r from-blue-600 to-green-600 text-white">
+          <Card className="p-4 bg-[#1A3C34] text-white">
             <div className="flex items-center gap-2 mb-3">
               <Sparkles className="w-5 h-5" />
               <h3 className="font-bold">AI Suggestions</h3>
@@ -247,7 +247,7 @@ export function FeedPage() {
             <p className="text-sm text-white/90 mb-3">
               Based on your interests in {user?.expertise?.[0]}, you might want to explore quantum computing applications
             </p>
-            <Button size="sm" className="bg-white text-blue-600 hover:bg-gray-100 w-full">
+            <Button size="sm" className="bg-white text-[#1A3C34] hover:bg-gray-100 w-full">
               Explore now
             </Button>
           </Card>
@@ -314,7 +314,7 @@ export function FeedPage() {
                   Cancel
                 </Button>
                 <Button
-                  className="flex-1 bg-gradient-to-r from-blue-600 to-green-600 hover:from-blue-700 hover:to-green-700"
+                  className="flex-1 bg-[#1A3C34] hover:bg-[#15302a]"
                   onClick={handleCollaborationRequest}
                 >
                   Send request
@@ -347,21 +347,21 @@ export function FeedPage() {
 
               {/* Title and Status */}
               <div>
-                <h2 className="text-3xl font-bold text-blue-600 mb-3">{detailsResearch.title}</h2>
+                <h2 className="text-3xl font-bold text-[#1A3C34] mb-3">{detailsResearch.title}</h2>
                 <div className="flex items-center gap-3 flex-wrap">
                   <Badge className={
-                    detailsResearch.fundingStatus === 'funded' ? 'bg-green-100 text-green-700' :
+                    detailsResearch.fundingStatus === 'funded' ? 'bg-lime-100 text-[#15803d]' :
                     detailsResearch.fundingStatus === 'seeking' ? 'bg-yellow-100 text-yellow-700' :
                     'bg-gray-100 text-gray-700'
                   }>
                     {detailsResearch.fundingStatus === 'seeking' ? 'Seeking Funding' : detailsResearch.fundingStatus}
                   </Badge>
-                  <Badge className="bg-blue-100 text-blue-700">{detailsResearch.field}</Badge>
+                  <Badge className="bg-[#E8F5E9] text-[#1A3C34]">{detailsResearch.field}</Badge>
                 </div>
               </div>
 
               {/* Author Info */}
-              <Card className="p-4 bg-gradient-to-r from-blue-50 to-green-50">
+              <Card className="p-4 bg-[#F0FDF4]">
                 <div className="flex items-center gap-4">
                   {detailsAuthor.photo ? (
                     <img
@@ -375,7 +375,7 @@ export function FeedPage() {
                     />
                   ) : (
                     <Avatar
-                      className="w-16 h-16 bg-gradient-to-br from-blue-500 to-green-500 flex items-center justify-center text-white font-bold text-2xl cursor-pointer"
+                      className="w-16 h-16 bg-[#1A3C34] flex items-center justify-center text-white font-bold text-2xl cursor-pointer"
                       onClick={() => {
                         setViewDetails(null);
                         navigate(`/researcher/profile/${detailsAuthor.id}`);
@@ -406,7 +406,7 @@ export function FeedPage() {
               {/* Abstract */}
               <div>
                 <h3 className="text-lg font-bold mb-3 flex items-center gap-2">
-                  <FileText className="w-5 h-5 text-blue-600" />
+                  <FileText className="w-5 h-5 text-[#1A3C34]" />
                   Abstract
                 </h3>
                 <p className="text-gray-700 leading-relaxed">{detailsResearch.abstract}</p>
@@ -427,11 +427,11 @@ export function FeedPage() {
               {/* Stats Grid */}
               <div className="grid grid-cols-3 gap-4">
                 <Card className="p-4 text-center">
-                  <div className="text-3xl font-bold text-blue-600 mb-1">{detailsResearch.citations}</div>
+                  <div className="text-3xl font-bold text-[#1A3C34] mb-1">{detailsResearch.citations}</div>
                   <div className="text-sm text-gray-600">Citations</div>
                 </Card>
                 <Card className="p-4 text-center">
-                  <div className="text-3xl font-bold text-green-600 mb-1">
+                  <div className="text-3xl font-bold text-[#16a34a] mb-1">
                     {detailsResearch.likes || 0}
                   </div>
                   <div className="text-sm text-gray-600">Likes</div>
@@ -462,7 +462,7 @@ export function FeedPage() {
                     <Link2 className="w-5 h-5 text-gray-500" />
                     <div>
                       <div className="text-sm text-gray-500">DOI</div>
-                      <div className="font-medium text-blue-600 hover:underline cursor-pointer">
+                      <div className="font-medium text-[#1A3C34] hover:underline cursor-pointer">
                         {detailsResearch.doi}
                       </div>
                     </div>
@@ -494,7 +494,7 @@ export function FeedPage() {
                   Close
                 </Button>
                 <Button
-                  className="flex-1 bg-gradient-to-r from-blue-600 to-green-600 hover:from-blue-700 hover:to-green-700"
+                  className="flex-1 bg-[#1A3C34] hover:bg-[#15302a]"
                   onClick={() => {
                     setViewDetails(null);
                     setCollaborationRequest(detailsResearch.id);

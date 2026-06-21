@@ -10,11 +10,11 @@ export function ProjectsBrowse() {
   const { research, researchers } = useApp();
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-blue-50 via-white to-green-50">
-      <nav className="bg-white/80 backdrop-blur-md border-b border-blue-100">
+    <div className="min-h-screen bg-[#F2F3F5]">
+      <nav className="bg-white/80 backdrop-blur-md border-b border-gray-200">
         <div className="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
           <div className="flex items-center gap-2">
-            <div className="w-10 h-10 bg-gradient-to-br from-blue-600 to-green-600 rounded-lg flex items-center justify-center">
+            <div className="w-10 h-10 bg-[#1A3C34] rounded-lg flex items-center justify-center">
               <Brain className="w-6 h-6 text-white" />
             </div>
             <span className="font-bold text-xl">Browse Projects</span>
@@ -33,8 +33,8 @@ export function ProjectsBrowse() {
           {research.map(project => {
             const lead = researchers.find(r => r.id === project.researcherId);
             return (
-              <Card key={project.id} className="p-6 hover:shadow-lg transition-all">
-                <h3 className="text-xl font-bold mb-2 text-blue-600">{project.title}</h3>
+              <Card key={project.id} className="p-6 hover:shadow-sm transition-all">
+                <h3 className="text-xl font-bold mb-2 text-[#1A3C34]">{project.title}</h3>
                 <p className="text-gray-600 mb-4">{project.abstract}</p>
                 <div className="flex flex-wrap gap-2 mb-4">
                   {project.keywords.map(k => (
@@ -46,7 +46,7 @@ export function ProjectsBrowse() {
                     Lead: {lead.name} • {lead.department}
                   </div>
                 )}
-                <Button className="bg-gradient-to-r from-blue-600 to-green-600">
+                <Button className="bg-[#1A3C34]">
                   <DollarSign className="w-4 h-4 mr-2" />
                   Fund Project
                 </Button>

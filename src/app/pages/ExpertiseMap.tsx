@@ -30,11 +30,11 @@ export function ExpertiseMap() {
   }
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-blue-50 via-white to-green-50">
-      <nav className="bg-white/80 backdrop-blur-md border-b border-blue-100">
+    <div className="min-h-screen bg-[#F2F3F5]">
+      <nav className="bg-white/80 backdrop-blur-md border-b border-gray-200">
         <div className="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
           <div className="flex items-center gap-2">
-            <div className="w-10 h-10 bg-gradient-to-br from-blue-600 to-green-600 rounded-lg flex items-center justify-center">
+            <div className="w-10 h-10 bg-[#1A3C34] rounded-lg flex items-center justify-center">
               <Brain className="w-6 h-6 text-white" />
             </div>
             <span className="font-bold text-xl">Expertise Map</span>
@@ -60,7 +60,7 @@ export function ExpertiseMap() {
               return (
                 <div
                   key={area.area}
-                  className="aspect-square rounded-lg p-4 flex flex-col items-center justify-center text-center cursor-pointer hover:scale-105 transition-transform border-2 border-blue-200"
+                  className="aspect-square rounded-lg p-4 flex flex-col items-center justify-center text-center cursor-pointer hover:scale-105 transition-transform border-2 border-[#1A3C34]/20"
                   style={{ backgroundColor: bgColor }}
                 >
                   <div className={`font-bold text-lg mb-2 ${intensity > 0.5 ? 'text-white' : 'text-blue-900'}`}>
@@ -92,17 +92,17 @@ export function ExpertiseMap() {
         <div className="grid grid-cols-2 gap-8">
           <Card className="p-6">
             <h3 className="text-xl font-bold mb-4 flex items-center gap-2">
-              <Map className="w-6 h-6 text-blue-600" />
+              <Map className="w-6 h-6 text-[#1A3C34]" />
               Top Expertise Areas
             </h3>
             <div className="space-y-4">
               {expertiseAreas.map((area, idx) => (
                 <div
                   key={area.area}
-                  className="flex items-center justify-between p-4 border border-gray-200 rounded-lg hover:border-blue-300 transition-all"
+                  className="flex items-center justify-between p-4 border border-gray-200 rounded-lg hover:border-[#1A3C34]/30 transition-all"
                 >
                   <div className="flex items-center gap-4">
-                    <div className="w-8 h-8 bg-gradient-to-br from-blue-600 to-green-600 rounded-lg flex items-center justify-center text-white font-bold">
+                    <div className="w-8 h-8 bg-[#1A3C34] rounded-lg flex items-center justify-center text-white font-bold">
                       {idx + 1}
                     </div>
                     <div>
@@ -110,7 +110,7 @@ export function ExpertiseMap() {
                       <div className="text-sm text-gray-500">{area.count} experts</div>
                     </div>
                   </div>
-                  <Badge className="bg-green-100 text-green-700">
+                  <Badge className="bg-lime-100 text-[#15803d]">
                     <TrendingUp className="w-3 h-3 mr-1" />
                     {area.growth}
                   </Badge>
@@ -121,7 +121,7 @@ export function ExpertiseMap() {
 
           <Card className="p-6">
             <h3 className="text-xl font-bold mb-4 flex items-center gap-2">
-              <Users className="w-6 h-6 text-green-600" />
+              <Users className="w-6 h-6 text-[#16a34a]" />
               Department Distribution
             </h3>
             <div className="space-y-4">
@@ -132,7 +132,7 @@ export function ExpertiseMap() {
                     <span className="font-bold">28 researchers</span>
                   </div>
                   <div className="w-full h-2 bg-gray-200 rounded-full overflow-hidden">
-                    <div className="h-full bg-blue-600" style={{ width: '70%' }} />
+                    <div className="h-full bg-[#1A3C34]" style={{ width: '70%' }} />
                   </div>
                 </div>
 
@@ -142,7 +142,7 @@ export function ExpertiseMap() {
                     <span className="font-bold">22 researchers</span>
                   </div>
                   <div className="w-full h-2 bg-gray-200 rounded-full overflow-hidden">
-                    <div className="h-full bg-green-600" style={{ width: '55%' }} />
+                    <div className="h-full bg-lime-500" style={{ width: '55%' }} />
                   </div>
                 </div>
 
@@ -152,7 +152,7 @@ export function ExpertiseMap() {
                     <span className="font-bold">18 researchers</span>
                   </div>
                   <div className="w-full h-2 bg-gray-200 rounded-full overflow-hidden">
-                    <div className="h-full bg-blue-600" style={{ width: '45%' }} />
+                    <div className="h-full bg-[#1A3C34]" style={{ width: '45%' }} />
                   </div>
                 </div>
 
@@ -162,7 +162,7 @@ export function ExpertiseMap() {
                     <span className="font-bold">15 researchers</span>
                   </div>
                   <div className="w-full h-2 bg-gray-200 rounded-full overflow-hidden">
-                    <div className="h-full bg-green-600" style={{ width: '38%' }} />
+                    <div className="h-full bg-lime-500" style={{ width: '38%' }} />
                   </div>
                 </div>
               </div>

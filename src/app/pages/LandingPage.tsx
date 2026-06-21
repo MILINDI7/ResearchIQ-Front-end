@@ -6,15 +6,15 @@ export function LandingPage() {
   const navigate = useNavigate();
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-blue-50 via-white to-green-50">
+    <div className="min-h-screen bg-[#F2F3F5]">
       {/* Navigation */}
-      <nav className="bg-white/80 backdrop-blur-md border-b border-blue-100 sticky top-0 z-50">
+      <nav className="bg-white border-b border-gray-200 sticky top-0 z-50">
         <div className="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
           <div className="flex items-center gap-2">
-            <div className="w-10 h-10 bg-gradient-to-br from-blue-600 to-green-600 rounded-lg flex items-center justify-center">
+            <div className="w-10 h-10 bg-[#1A3C34] rounded-lg flex items-center justify-center">
               <Brain className="w-6 h-6 text-white" />
             </div>
-            <span className="font-bold text-xl bg-gradient-to-r from-blue-600 to-green-600 bg-clip-text text-transparent">
+            <span className="font-bold text-xl text-[#1A3C34]">
               Research IQ
             </span>
           </div>
@@ -23,7 +23,7 @@ export function LandingPage() {
               Log In
             </Button>
             <Button
-              className="bg-gradient-to-r from-blue-600 to-green-600 hover:from-blue-700 hover:to-green-700"
+              className="bg-[#1A3C34] hover:bg-[#15302a]"
               onClick={() => navigate('/signup')}
             >
               Get Started
@@ -36,11 +36,11 @@ export function LandingPage() {
       <section className="max-w-7xl mx-auto px-6 py-20">
         <div className="text-center max-w-4xl mx-auto">
           <div className="inline-block mb-4">
-            <span className="px-4 py-2 bg-blue-100 text-blue-700 rounded-full text-sm font-medium">
+            <span className="px-4 py-2 bg-[#E8F5E9] text-[#1A3C34] rounded-full text-sm font-medium">
               AI-Powered Research Intelligence
             </span>
           </div>
-          <h1 className="text-6xl font-bold mb-6 bg-gradient-to-r from-blue-600 via-green-600 to-blue-600 bg-clip-text text-transparent">
+          <h1 className="text-6xl font-bold mb-6 text-[#1A3C34]">
             Accelerate Academic Collaboration
           </h1>
           <p className="text-xl text-gray-600 mb-8 leading-relaxed">
@@ -50,7 +50,7 @@ export function LandingPage() {
           <div className="flex items-center justify-center gap-4">
             <Button
               size="lg"
-              className="bg-gradient-to-r from-blue-600 to-green-600 hover:from-blue-700 hover:to-green-700 text-lg px-8"
+              className="bg-[#1A3C34] hover:bg-[#15302a] text-lg px-8"
               onClick={() => navigate('/signup')}
             >
               Start Your Research Journey
@@ -58,7 +58,7 @@ export function LandingPage() {
             <Button
               size="lg"
               variant="outline"
-              className="border-2 border-blue-600 text-blue-600 hover:bg-blue-50 text-lg px-8"
+              className="border-2 border-blue-600 text-[#1A3C34] hover:bg-[#F0FDF4] text-lg px-8"
               onClick={() => navigate('/login')}
             >
               Explore Demo
@@ -69,19 +69,19 @@ export function LandingPage() {
         {/* Stats */}
         <div className="grid grid-cols-4 gap-8 mt-20 max-w-4xl mx-auto">
           <div className="text-center">
-            <div className="text-4xl font-bold text-blue-600 mb-2">2,500+</div>
+            <div className="text-4xl font-bold text-[#1A3C34] mb-2">2,500+</div>
             <div className="text-gray-600">Researchers</div>
           </div>
           <div className="text-center">
-            <div className="text-4xl font-bold text-green-600 mb-2">5,000+</div>
+            <div className="text-4xl font-bold text-[#16a34a] mb-2">5,000+</div>
             <div className="text-gray-600">Publications</div>
           </div>
           <div className="text-center">
-            <div className="text-4xl font-bold text-blue-600 mb-2">1,200+</div>
+            <div className="text-4xl font-bold text-[#1A3C34] mb-2">1,200+</div>
             <div className="text-gray-600">Collaborations</div>
           </div>
           <div className="text-center">
-            <div className="text-4xl font-bold text-green-600 mb-2">$50M+</div>
+            <div className="text-4xl font-bold text-[#16a34a] mb-2">$50M+</div>
             <div className="text-gray-600">Funding Secured</div>
           </div>
         </div>
@@ -137,7 +137,7 @@ export function LandingPage() {
       </section>
 
       {/* How It Works */}
-      <section className="py-20 bg-gradient-to-br from-blue-50 to-green-50">
+      <section className="py-20 bg-[#F0FDF4]">
         <div className="max-w-7xl mx-auto px-6">
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold mb-4">How It Works</h2>
@@ -146,7 +146,7 @@ export function LandingPage() {
 
           <div className="grid grid-cols-3 gap-12">
             <div className="text-center">
-              <div className="w-16 h-16 bg-gradient-to-br from-blue-600 to-green-600 rounded-full flex items-center justify-center text-white text-2xl font-bold mx-auto mb-4">
+              <div className="w-16 h-16 bg-[#1A3C34] rounded-full flex items-center justify-center text-white text-2xl font-bold mx-auto mb-4">
                 1
               </div>
               <h3 className="text-xl font-bold mb-3">Create Your Profile</h3>
@@ -155,7 +155,7 @@ export function LandingPage() {
               </p>
             </div>
             <div className="text-center">
-              <div className="w-16 h-16 bg-gradient-to-br from-blue-600 to-green-600 rounded-full flex items-center justify-center text-white text-2xl font-bold mx-auto mb-4">
+              <div className="w-16 h-16 bg-[#1A3C34] rounded-full flex items-center justify-center text-white text-2xl font-bold mx-auto mb-4">
                 2
               </div>
               <h3 className="text-xl font-bold mb-3">Discover & Connect</h3>
@@ -164,7 +164,7 @@ export function LandingPage() {
               </p>
             </div>
             <div className="text-center">
-              <div className="w-16 h-16 bg-gradient-to-br from-blue-600 to-green-600 rounded-full flex items-center justify-center text-white text-2xl font-bold mx-auto mb-4">
+              <div className="w-16 h-16 bg-[#1A3C34] rounded-full flex items-center justify-center text-white text-2xl font-bold mx-auto mb-4">
                 3
               </div>
               <h3 className="text-xl font-bold mb-3">Collaborate & Publish</h3>
@@ -177,7 +177,7 @@ export function LandingPage() {
       </section>
 
       {/* CTA */}
-      <section className="py-20 bg-gradient-to-r from-blue-600 to-green-600">
+      <section className="py-20 bg-[#1A3C34]">
         <div className="max-w-4xl mx-auto px-6 text-center text-white">
           <h2 className="text-4xl font-bold mb-4">Ready to Transform Your Research?</h2>
           <p className="text-xl mb-8 opacity-90">
@@ -185,7 +185,7 @@ export function LandingPage() {
           </p>
           <Button
             size="lg"
-            className="bg-white text-blue-600 hover:bg-gray-100 text-lg px-8"
+            className="bg-white text-[#1A3C34] hover:bg-gray-100 text-lg px-8"
             onClick={() => navigate('/signup')}
           >
             Get Started Free
@@ -199,7 +199,7 @@ export function LandingPage() {
           <div className="grid grid-cols-4 gap-8 mb-8">
             <div>
               <div className="flex items-center gap-2 mb-4">
-                <div className="w-8 h-8 bg-gradient-to-br from-blue-600 to-green-600 rounded-lg flex items-center justify-center">
+                <div className="w-8 h-8 bg-[#1A3C34] rounded-lg flex items-center justify-center">
                   <Brain className="w-5 h-5 text-white" />
                 </div>
                 <span className="font-bold">Research IQ</span>
@@ -251,11 +251,11 @@ function FeatureCard({ icon, title, description, color }: {
   description: string;
   color: 'blue' | 'green';
 }) {
-  const bgColor = color === 'blue' ? 'bg-blue-100' : 'bg-green-100';
-  const textColor = color === 'blue' ? 'text-blue-600' : 'text-green-600';
+  const bgColor = color === 'blue' ? 'bg-[#E8F5E9]' : 'bg-lime-100';
+  const textColor = color === 'blue' ? 'text-[#1A3C34]' : 'text-[#16a34a]';
 
   return (
-    <div className="p-6 rounded-xl border border-gray-200 hover:border-blue-300 hover:shadow-lg transition-all cursor-pointer bg-white">
+    <div className="p-6 rounded-xl border border-gray-200 hover:border-[#1A3C34]/30 hover:shadow-sm transition-all cursor-pointer bg-white">
       <div className={`w-14 h-14 ${bgColor} rounded-lg flex items-center justify-center ${textColor} mb-4`}>
         {icon}
       </div>
